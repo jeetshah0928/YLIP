@@ -1,0 +1,2637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Involved | Young Leaders in Politics</title>
+  <meta name="description" content="Join Young Leaders in Politics, work with YLIP on a political campaign, share an opportunity, or connect with our network of young political leaders.">
+  <meta name="theme-color" content="#18065C">
+  <meta property="og:title" content="Get Involved | Young Leaders in Politics">
+  <meta property="og:description" content="Join Young Leaders in Politics, work with YLIP on a political campaign, share an opportunity, or connect with our network of young political leaders.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2318065C'/%3E%3Ctext x='32' y='42' font-family='Arial Narrow,Arial,sans-serif' font-weight='700' font-size='22' fill='white' text-anchor='middle'%3EYLIP%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@1,8..60,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================
+       DESIGN TOKENS
+       ========================================================== */
+    :root {
+      --navy: #18065C;
+      --navy-900: #0D0333;
+      --navy-800: #120449;
+      --navy-700: #24107A;
+      --navy-100: #E6E2F3;
+      --navy-50: #F3F1F9;
+
+      --ink: #16151C;
+      --charcoal: #2A2933;
+      --gray-600: #5A5768;
+      --gray-400: #9C99A8;
+      --gray-200: #DAD8E0;
+      --gray-100: #ECEBEF;
+      --off: #F7F6F2;
+      --white: #FFFFFF;
+
+      --on-dark: rgba(255, 255, 255, 0.92);
+      --on-dark-muted: rgba(255, 255, 255, 0.70);
+      --on-dark-rule: rgba(255, 255, 255, 0.16);
+
+      --font-display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+      --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+
+      --max: 1360px;
+      --gutter: clamp(1.25rem, 4vw, 3.5rem);
+      --section: clamp(4.5rem, 9vw, 8.5rem);
+      --header-h: 76px;
+      --radius: 2px;
+      --ease: cubic-bezier(.2, .7, .2, 1);
+    }
+
+    /* ==========================================================
+       BASE
+       ========================================================== */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 1rem); -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    body.no-scroll { overflow: hidden; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; }
+    h1, h2, h3, h4, p, dl, dd { margin: 0; }
+    ul, ol { margin: 0; padding: 0; list-style: none; }
+
+    :focus-visible { outline: 2px solid var(--navy); outline-offset: 3px; }
+    .on-dark :focus-visible { outline-color: var(--white); }
+
+    .skip-link {
+      position: absolute; left: 1rem; top: -100px; z-index: 200;
+      background: var(--navy); color: var(--white);
+      padding: .75rem 1rem; font-weight: 600; text-decoration: none;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    .visually-hidden {
+      position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+
+    .container { width: 100%; max-width: var(--max); margin-inline: auto; padding-inline: var(--gutter); }
+    .section { padding-block: var(--section); }
+
+    /* ==========================================================
+       TYPOGRAPHY
+       ========================================================== */
+    .h2, .h3 {
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: -0.005em;
+    }
+    .h2 {
+      font-size: clamp(2.5rem, 1.4rem + 4.4vw, 5.25rem);
+      line-height: 0.92;
+    }
+    .h2 span { display: block; }
+    .h3 {
+      font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+      line-height: 1;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .75rem;
+      font-family: var(--font-body);
+      font-size: .75rem; font-weight: 600;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+    }
+    .eyebrow::before { content: ""; width: 28px; height: 1px; background: currentColor; }
+    .on-dark .eyebrow { color: var(--on-dark-muted); }
+
+    .lede { font-size: clamp(1.0625rem, 1rem + .35vw, 1.25rem); line-height: 1.6; color: var(--gray-600); max-width: 38rem; }
+    .on-dark .lede { color: var(--on-dark-muted); }
+
+    .serif-quote {
+      font-family: var(--font-serif); font-style: italic; font-weight: 400;
+      font-size: clamp(1.375rem, 1.1rem + 1vw, 2rem); line-height: 1.3;
+    }
+
+    /* ==========================================================
+       BUTTONS & LINKS
+       ========================================================== */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .75rem;
+      min-height: 52px; padding: .875rem 1.625rem;
+      font-family: var(--font-display); font-weight: 600; font-size: 1.0625rem;
+      letter-spacing: .1em; text-transform: uppercase; text-decoration: none;
+      border: 1px solid transparent; border-radius: var(--radius);
+      transition: background-color .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease);
+      cursor: pointer;
+    }
+    .btn .arrow { transition: transform .25s var(--ease); }
+    .btn:hover .arrow { transform: translateX(4px); }
+
+    .btn-primary { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .btn-primary:hover { background: var(--navy-900); border-color: var(--navy-900); }
+    .btn-outline { background: transparent; color: var(--navy); border-color: var(--navy); }
+    .btn-outline:hover { background: var(--navy); color: var(--white); }
+    .btn-light { background: var(--white); color: var(--navy); border-color: var(--white); }
+    .btn-light:hover { background: var(--navy-100); border-color: var(--navy-100); }
+    .btn-ghost-light { background: transparent; color: var(--white); border-color: rgba(255,255,255,.55); }
+    .btn-ghost-light:hover { background: var(--white); color: var(--navy); border-color: var(--white); }
+
+    .text-link {
+      display: inline-flex; align-items: center; gap: .625rem;
+      font-family: var(--font-display); font-weight: 600; font-size: 1.125rem;
+      letter-spacing: .1em; text-transform: uppercase; text-decoration: none;
+      color: var(--navy);
+      padding-bottom: .375rem;
+      border-bottom: 2px solid currentColor;
+    }
+    .text-link .arrow { transition: transform .25s var(--ease); }
+    .text-link:hover .arrow { transform: translateX(5px); }
+    .on-dark .text-link { color: var(--white); }
+
+    /* ==========================================================
+       PHOTO PLACEHOLDERS
+       To add a real photo, replace the placeholder <span> content
+       inside a .photo figure with:
+       <img src="images/your-photo.jpg" alt="Describe the photo">
+       ========================================================== */
+    .photo {
+      position: relative; margin: 0; overflow: hidden;
+      aspect-ratio: var(--ratio, 4 / 3);
+      background-color: var(--navy-50);
+      border: 1px solid var(--gray-200);
+    }
+    .photo::before {
+      content: ""; position: absolute; inset: 0;
+      background-image: repeating-linear-gradient(135deg, rgba(24, 6, 92, .07) 0 1px, transparent 1px 16px);
+      pointer-events: none;
+    }
+    .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+    .photo-label {
+      position: absolute; left: 1.25rem; bottom: 1.25rem; z-index: 0;
+      display: flex; flex-direction: column; gap: .25rem;
+      font-size: .6875rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--navy);
+    }
+    .photo-label code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .75rem; letter-spacing: 0; text-transform: none; font-weight: 500;
+      color: var(--gray-600);
+    }
+    .photo-corner {
+      position: absolute; top: 1.25rem; right: 1.25rem; width: 18px; height: 18px;
+      border-top: 1px solid var(--navy); border-right: 1px solid var(--navy); opacity: .5;
+    }
+    .photo--dark { background-color: rgba(255,255,255,.04); border-color: var(--on-dark-rule); }
+    .photo--dark::before { background-image: repeating-linear-gradient(135deg, rgba(255,255,255,.06) 0 1px, transparent 1px 16px); }
+    .photo--dark .photo-label { color: var(--on-dark); }
+    .photo--dark .photo-label code { color: var(--on-dark-muted); }
+    .photo--dark .photo-corner { border-color: var(--white); }
+
+    /* ==========================================================
+       HEADER / NAVIGATION
+       ========================================================== */
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+      height: var(--header-h);
+    }
+
+    /* Brand — text fallback logo */
+    .brand { display: inline-flex; align-items: center; gap: .75rem; text-decoration: none; color: var(--navy); flex-shrink: 0; }
+    .brand-mark {
+      display: grid; place-items: center;
+      width: 46px; height: 46px;
+      background: var(--navy); color: var(--white);
+      font-family: var(--font-display); font-weight: 800; font-size: 1.125rem; letter-spacing: .02em; line-height: 1;
+    }
+    .brand-word {
+      display: flex; flex-direction: column;
+      font-family: var(--font-display); font-weight: 700; font-size: .6875rem;
+      line-height: 1.02; letter-spacing: .14em; text-transform: uppercase; color: var(--navy);
+    }
+    /* Used once the official logo image is added */
+    .brand-logo { height: 46px; width: auto; }
+
+    .site-nav { display: flex; align-items: center; gap: 2.5rem; }
+    .nav-list { display: flex; align-items: center; gap: clamp(1.25rem, 2.2vw, 2.25rem); }
+    .nav-list a {
+      position: relative; display: inline-block; padding-block: .5rem;
+      font-size: .8125rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--charcoal); text-decoration: none;
+      transition: color .2s var(--ease);
+    }
+    .nav-list a::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+      background: var(--navy); transform: scaleX(0); transform-origin: left;
+      transition: transform .3s var(--ease);
+    }
+    .nav-list a:hover { color: var(--navy); }
+    .nav-list a:hover::after { transform: scaleX(1); }
+    .nav-list .nav-cta-mobile { display: none; }
+
+    .header-actions { display: flex; align-items: center; gap: .75rem; }
+    .header-cta { min-height: 44px; padding: .625rem 1.25rem; font-size: 1rem; }
+
+    .nav-toggle {
+      display: none; align-items: center; justify-content: center;
+      width: 46px; height: 46px; padding: 0;
+      background: transparent; border: 1px solid var(--gray-200); border-radius: var(--radius);
+      cursor: pointer;
+    }
+    .nav-toggle-bars { position: relative; width: 20px; height: 12px; }
+    .nav-toggle-bars span {
+      position: absolute; left: 0; width: 100%; height: 2px; background: var(--navy);
+      transition: transform .3s var(--ease), opacity .2s var(--ease), top .3s var(--ease);
+    }
+    .nav-toggle-bars span:nth-child(1) { top: 0; }
+    .nav-toggle-bars span:nth-child(2) { top: 5px; }
+    .nav-toggle-bars span:nth-child(3) { top: 10px; }
+    .nav-open .nav-toggle-bars span:nth-child(1) { top: 5px; transform: rotate(45deg); }
+    .nav-open .nav-toggle-bars span:nth-child(2) { opacity: 0; }
+    .nav-open .nav-toggle-bars span:nth-child(3) { top: 5px; transform: rotate(-45deg); }
+
+    /* ==========================================================
+       HERO
+       ========================================================== */
+    .hero { padding-top: clamp(2rem, 4vw, 3.5rem); background: var(--white); }
+    .hero-meta {
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem 2rem;
+      padding-bottom: 1rem; margin-bottom: clamp(2rem, 5vw, 4rem);
+      border-bottom: 1px solid var(--ink);
+      font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--gray-600);
+    }
+    .hero-loc { display: inline-flex; align-items: center; gap: .625rem; color: var(--navy); }
+    .hero-loc::before { content: ""; width: 8px; height: 8px; background: var(--navy); }
+
+    .hero-title {
+      font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+      font-size: clamp(3rem, 1.2rem + 6.6vw, 7.75rem);
+      line-height: .88; letter-spacing: -.012em;
+      color: var(--ink);
+    }
+    .hero-title span { display: block; }
+    .hero-title .accent { color: var(--navy); }
+
+    .hero-sub {
+      display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: end; gap: 2rem 4rem;
+      margin-top: clamp(2rem, 4vw, 3.25rem);
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .hero-lede { font-size: clamp(1.0625rem, 1rem + .45vw, 1.3125rem); line-height: 1.6; color: var(--charcoal); max-width: 40rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .875rem; justify-content: flex-end; }
+
+    .hero-visual { position: relative; }
+    .photo--hero { --ratio: 21 / 9; }
+    .hero-thesis {
+      position: absolute; right: calc(var(--gutter) + clamp(1rem, 3vw, 2.5rem)); bottom: 0; z-index: 2;
+      width: min(400px, 40%);
+      background: var(--navy); color: var(--white);
+      padding: clamp(1.5rem, 2.5vw, 2.25rem);
+    }
+    .hero-thesis-label {
+      font-size: .6875rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--on-dark-muted); margin-bottom: 1rem; display: block;
+    }
+    .hero-thesis ol { display: grid; gap: .25rem; }
+    .hero-thesis li {
+      font-family: var(--font-display); font-weight: 600; text-transform: uppercase;
+      font-size: clamp(1.25rem, 1rem + .9vw, 1.75rem); line-height: 1.08; letter-spacing: .01em;
+      color: var(--on-dark-muted);
+    }
+    .hero-thesis li:last-child { color: var(--white); margin-top: .75rem; padding-top: .75rem; border-top: 1px solid var(--on-dark-rule); }
+
+    /* ==========================================================
+       METRICS
+       To update: edit the .metric-value and .metric-label text in
+       the HTML. Use .metric-value--text for word-based values.
+       ========================================================== */
+    .metrics { background: var(--navy); color: var(--white); }
+    .metrics-header {
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      padding-block: 1.5rem; border-bottom: 1px solid var(--on-dark-rule);
+      font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--on-dark-muted);
+    }
+    .metrics-grid {
+      display: grid; grid-template-columns: repeat(5, 1fr);
+      gap: 1px; background: var(--on-dark-rule);
+    }
+    .metric {
+      background: var(--navy);
+      padding: clamp(2rem, 3.5vw, 3rem) clamp(1.25rem, 2vw, 2rem);
+      display: flex; flex-direction: column; justify-content: space-between; gap: 1.25rem;
+      min-height: 200px;
+    }
+    .metric:first-child { padding-left: 0; }
+    .metric-value {
+      font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+      font-size: clamp(2.5rem, 1.6rem + 2.2vw, 3.5rem); line-height: .9; letter-spacing: -.01em;
+      white-space: nowrap;
+    }
+    .metric-value--text { font-size: clamp(1.625rem, 1.25rem + 1.2vw, 2.25rem); line-height: 1; letter-spacing: .01em; white-space: normal; }
+    .metric-label {
+      font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--on-dark-muted); line-height: 1.5;
+      padding-top: 1rem; border-top: 1px solid var(--on-dark-rule);
+    }
+
+    /* ==========================================================
+       INTRO / PILLARS
+       ========================================================== */
+    .intro-head {
+      display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 2rem 4rem; align-items: end;
+      margin-bottom: clamp(3rem, 6vw, 5rem);
+    }
+    .pillars { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--ink); }
+    .pillar {
+      position: relative; display: flex; flex-direction: column; justify-content: space-between; gap: 3rem;
+      padding: clamp(2rem, 4vw, 3.5rem);
+      min-height: 400px; text-decoration: none;
+      transition: background-color .3s var(--ease);
+    }
+    .pillar--light { background: var(--off); color: var(--ink); }
+    .pillar--light:hover { background: var(--navy-50); }
+    .pillar--dark { background: var(--navy); color: var(--white); }
+    .pillar--dark:hover { background: var(--navy-800); }
+    .pillar-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+    .pillar-index { font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
+    .pillar--light .pillar-index { color: var(--navy); }
+    .pillar--dark .pillar-index { color: var(--on-dark-muted); }
+    .pillar-num {
+      font-family: var(--font-display); font-weight: 700; font-size: clamp(4rem, 3rem + 3vw, 6.5rem); line-height: .8;
+      opacity: .14;
+    }
+    .pillar-title {
+      font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+      font-size: clamp(2.25rem, 1.6rem + 2.4vw, 3.75rem); line-height: .92; margin-bottom: 1.25rem;
+    }
+    .pillar-audience { font-size: 1rem; line-height: 1.6; max-width: 30rem; }
+    .pillar--light .pillar-audience { color: var(--gray-600); }
+    .pillar--dark .pillar-audience { color: var(--on-dark-muted); }
+    .pillar-link {
+      display: inline-flex; align-items: center; gap: .625rem; margin-top: 2rem;
+      font-family: var(--font-display); font-weight: 600; font-size: 1.0625rem; letter-spacing: .1em; text-transform: uppercase;
+    }
+    .pillar-link .arrow { transition: transform .25s var(--ease); }
+    .pillar:hover .pillar-link .arrow { transform: translateY(4px); }
+
+    /* ==========================================================
+       CAMPAIGN SERVICES
+       ========================================================== */
+    .services { background: var(--off); border-top: 1px solid var(--gray-200); }
+    .services-layout { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 3rem clamp(3rem, 6vw, 6rem); align-items: start; }
+    .services-aside { position: sticky; top: calc(var(--header-h) + 3rem); }
+    .services-aside .lede { margin-top: 1.75rem; margin-bottom: 2.5rem; }
+
+    .service-list { border-top: 1px solid var(--ink); }
+    .service {
+      position: relative;
+      display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: .5rem 1.5rem;
+      padding: clamp(1.75rem, 3vw, 2.5rem) clamp(.75rem, 1.5vw, 1.5rem) clamp(1.75rem, 3vw, 2.5rem) 0;
+      border-bottom: 1px solid var(--gray-200);
+      transition: background-color .3s var(--ease), padding-left .3s var(--ease);
+    }
+    .service::before {
+      content: ""; position: absolute; left: 0; top: -1px; bottom: -1px; width: 3px;
+      background: var(--navy); transform: scaleY(0); transform-origin: top;
+      transition: transform .35s var(--ease);
+    }
+    .service:hover { background: var(--white); padding-left: 1.5rem; }
+    .service:hover::before { transform: scaleY(1); }
+    .service-num {
+      font-family: var(--font-display); font-weight: 700; font-size: clamp(2.25rem, 1.8rem + 1.4vw, 3rem); line-height: .9;
+      color: var(--gray-400); transition: color .3s var(--ease);
+    }
+    .service:hover .service-num { color: var(--navy); }
+    .service-title { margin-bottom: .75rem; color: var(--ink); }
+    .service-desc { color: var(--gray-600); max-width: 36rem; }
+
+    /* ==========================================================
+       CIVIC EDUCATION & LEADERSHIP
+       ========================================================== */
+    .leadership { background: var(--navy); color: var(--white); }
+    .lead-head {
+      display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 2rem 4rem; align-items: end;
+      margin-bottom: clamp(3rem, 5vw, 4.5rem);
+    }
+    .lead-head .lede { margin-bottom: 2rem; }
+    .lead-photos { display: grid; grid-template-columns: 7fr 5fr; gap: clamp(.75rem, 1.5vw, 1.25rem); margin-bottom: clamp(3rem, 5vw, 4.5rem); }
+    .lead-photos .photo:first-child { --ratio: 16 / 9; }
+    .lead-photos .photo:last-child { aspect-ratio: auto; height: 100%; min-height: 240px; }
+    .lead-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--on-dark-rule);
+      border-top: 1px solid var(--on-dark-rule); border-bottom: 1px solid var(--on-dark-rule);
+    }
+    .lead-item {
+      background: var(--navy);
+      padding: clamp(1.75rem, 3vw, 2.5rem) clamp(1.25rem, 2.5vw, 2.25rem);
+      transition: background-color .3s var(--ease);
+    }
+    .lead-item:hover { background: var(--navy-800); }
+    .lead-item-index {
+      display: block; margin-bottom: 2.5rem;
+      font-size: .75rem; font-weight: 600; letter-spacing: .18em; color: var(--on-dark-muted);
+    }
+    .lead-item .h3 { margin-bottom: 1rem; font-size: clamp(1.375rem, 1.15rem + .8vw, 1.75rem); }
+    .lead-item p { color: var(--on-dark-muted); font-size: .9375rem; line-height: 1.65; }
+
+    /* ==========================================================
+       IN THE FIELD
+       ========================================================== */
+    .field-head {
+      display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 2rem 4rem; align-items: end;
+      margin-bottom: clamp(3rem, 5vw, 4.5rem);
+    }
+    .levels { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); }
+    .level {
+      position: relative;
+      padding: 1.75rem clamp(1rem, 2vw, 1.75rem) 2.25rem;
+      border-right: 1px solid var(--gray-200);
+    }
+    .level:first-child { padding-left: 0; }
+    .level:last-child { border-right: 0; }
+    .level::before {
+      content: ""; position: absolute; left: 0; right: 0; top: -1px; height: 4px;
+      background: var(--navy); transform: scaleX(0); transform-origin: left;
+      transition: transform .4s var(--ease);
+    }
+    .level:hover::before { transform: scaleX(1); }
+    .level-index { font-size: .75rem; font-weight: 600; letter-spacing: .18em; color: var(--gray-600); }
+    .level-name {
+      display: block; margin: 2.5rem 0 1rem;
+      font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+      font-size: clamp(2.5rem, 1.5rem + 3.2vw, 4.75rem); line-height: .85; letter-spacing: -.01em;
+      color: var(--navy);
+    }
+    .level-desc { font-size: .9375rem; color: var(--gray-600); }
+
+    .selected {
+      margin-top: clamp(4rem, 7vw, 6rem);
+      padding-top: 2rem; border-top: 1px solid var(--gray-200);
+    }
+    .selected-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 1rem 2rem; margin-bottom: 2rem; }
+    .selected-title { font-size: .8125rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--ink); }
+    .selected-note { font-size: .875rem; color: var(--gray-600); }
+    .logo-grid {
+      display: grid; grid-template-columns: repeat(6, 1fr);
+      gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200);
+    }
+    .logo-slot {
+      display: grid; place-items: center; min-height: 128px; padding: 1.5rem;
+      background: var(--white);
+      font-size: .6875rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; text-align: center;
+      color: var(--gray-400);
+    }
+    .logo-slot img { max-height: 56px; width: auto; filter: grayscale(1); opacity: .8; transition: filter .3s, opacity .3s; }
+    .logo-slot:hover img { filter: none; opacity: 1; }
+    .field-cta { margin-top: clamp(2.5rem, 4vw, 3.5rem); }
+
+    /* ==========================================================
+       HOW YLIP WORKS
+       ========================================================== */
+    .process { background: var(--off); border-top: 1px solid var(--gray-200); }
+    .process-head { margin-bottom: clamp(3rem, 5vw, 4.5rem); max-width: 56rem; }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 clamp(1.25rem, 2.5vw, 2.5rem); }
+    .step { padding-top: 1.5rem; border-top: 1px solid var(--ink); }
+    .step-num {
+      display: block; margin-bottom: 2.25rem;
+      font-family: var(--font-display); font-weight: 700; font-size: 1.125rem; letter-spacing: .1em; color: var(--navy);
+    }
+    .step .h3 { font-size: clamp(2rem, 1.5rem + 1.6vw, 3rem); margin-bottom: 1rem; color: var(--ink); }
+    .step p { color: var(--gray-600); font-size: .9688rem; }
+
+    .cycle {
+      margin-top: clamp(3.5rem, 6vw, 5.5rem);
+      background: var(--white); border: 1px solid var(--gray-200);
+      padding: clamp(1.75rem, 3vw, 2.75rem);
+    }
+    .cycle-label {
+      display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+      font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gray-600);
+      margin-bottom: 1.75rem;
+    }
+    .cycle-list { display: flex; align-items: stretch; }
+    .cycle-item {
+      flex: 1; display: flex; align-items: stretch;
+      font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+      font-size: clamp(1.25rem, 1rem + 1vw, 1.875rem); line-height: 1; color: var(--ink);
+    }
+    .cycle-item strong { font-weight: 700; padding: 1.25rem 1rem; border-left: 3px solid var(--navy); background: var(--navy-50); width: 100%; display: flex; align-items: center; }
+    .cycle-item:last-child strong { background: var(--navy); color: var(--white); }
+    .cycle-arrow {
+      flex: 0 0 auto; display: grid; place-items: center; width: clamp(2rem, 3.5vw, 3.25rem);
+      font-family: var(--font-display); font-size: 1.75rem; color: var(--navy);
+    }
+    .cycle-loop {
+      margin-top: 1.25rem; display: flex; align-items: center; gap: .75rem;
+      font-size: .8125rem; color: var(--gray-600);
+    }
+    .cycle-loop::before { content: ""; flex: 0 0 28px; height: 1px; background: var(--gray-400); }
+
+    /* ==========================================================
+       IMPACT
+       ========================================================== */
+    .impact { background: var(--ink); color: var(--white); }
+    .impact-head {
+      display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 2rem 4rem; align-items: end;
+      margin-bottom: clamp(3rem, 5vw, 4.5rem);
+    }
+    .impact-head .serif-quote { color: var(--on-dark); padding-left: 1.5rem; border-left: 2px solid var(--white); }
+    .impact-grid {
+      display: grid; grid-template-columns: repeat(12, 1fr);
+      gap: clamp(2.5rem, 4vw, 3.5rem) clamp(1.25rem, 2.5vw, 2.5rem);
+    }
+    .impact-card { display: flex; flex-direction: column; gap: 1.5rem; }
+    .impact-card--a { grid-column: 1 / span 7; grid-row: span 2; }
+    .impact-card--a .photo { --ratio: 4 / 3.4; }
+    .impact-card--b, .impact-card--c { grid-column: 8 / span 5; }
+    .impact-card--b .photo, .impact-card--c .photo { --ratio: 16 / 9; }
+    .impact-card--d {
+      grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 1.5rem clamp(1.25rem, 2.5vw, 2.5rem); align-items: end;
+    }
+    .impact-card--d .photo { --ratio: 21 / 9; }
+    .impact-meta {
+      display: flex; gap: 1rem; align-items: baseline; padding-top: 1.25rem; border-top: 1px solid var(--on-dark-rule);
+    }
+    .impact-index { font-size: .75rem; font-weight: 600; letter-spacing: .18em; color: var(--on-dark-muted); flex: 0 0 auto; }
+    .impact-card .h3 { font-size: clamp(1.75rem, 1.3rem + 1.4vw, 2.5rem); margin-bottom: .75rem; }
+    .impact-card p { color: var(--on-dark-muted); max-width: 34rem; }
+    .impact-cta { margin-top: clamp(3rem, 5vw, 4.5rem); padding-top: 2rem; border-top: 1px solid var(--on-dark-rule); }
+
+    /* ==========================================================
+       OPPORTUNITIES
+       ========================================================== */
+    .opp-head {
+      display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 2rem 4rem; align-items: end;
+      margin-bottom: clamp(3rem, 5vw, 4.5rem);
+    }
+    .opp-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200);
+    }
+    .opp-grid li { display: flex; }
+    .opp {
+      flex: 1;
+      display: flex; flex-direction: column; justify-content: space-between; gap: 3rem;
+      min-height: 220px; padding: clamp(1.5rem, 2.5vw, 2.25rem);
+      background: var(--white); color: var(--ink); text-decoration: none;
+      transition: background-color .3s var(--ease), color .3s var(--ease);
+    }
+    .opp-top { display: flex; justify-content: space-between; align-items: flex-start; }
+    .opp-index { font-size: .75rem; font-weight: 600; letter-spacing: .18em; color: var(--gray-600); transition: color .3s var(--ease); }
+    .opp-arrow { font-size: 1.25rem; color: var(--navy); transition: transform .3s var(--ease), color .3s var(--ease); }
+    .opp-name {
+      font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+      font-size: clamp(1.75rem, 1.3rem + 1.4vw, 2.5rem); line-height: .95;
+    }
+    .opp:hover { background: var(--navy); color: var(--white); }
+    .opp:hover .opp-index { color: var(--on-dark-muted); }
+    .opp:hover .opp-arrow { color: var(--white); transform: translate(3px, -3px); }
+    .opp:focus-visible { outline-offset: -4px; }
+    .opp-cta { margin-top: clamp(2.5rem, 4vw, 3.5rem); }
+
+    /* ==========================================================
+       FINAL CTA
+       ========================================================== */
+    .final-cta { background: var(--navy); color: var(--white); }
+    .final-title {
+      font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+      font-size: clamp(3.25rem, 1.5rem + 7vw, 9rem); line-height: .86; letter-spacing: -.015em;
+      margin-bottom: clamp(3rem, 6vw, 5rem);
+    }
+    .paths { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--on-dark-rule); }
+    .path {
+      display: flex; flex-direction: column; justify-content: space-between; gap: 2.5rem;
+      padding: clamp(2rem, 3.5vw, 3rem) clamp(1.5rem, 3.5vw, 3.5rem) 0 0;
+    }
+    .path + .path { border-left: 1px solid var(--on-dark-rule); padding-left: clamp(1.5rem, 3.5vw, 3.5rem); padding-right: 0; }
+    .path-label { font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--on-dark-muted); margin-bottom: 1.25rem; display: block; }
+    .path p { font-size: clamp(1.125rem, 1rem + .5vw, 1.375rem); line-height: 1.5; color: var(--on-dark); max-width: 30rem; }
+    .path .btn { align-self: flex-start; }
+
+    /* ==========================================================
+       FOOTER
+       ========================================================== */
+    .site-footer { background: var(--navy-900); color: var(--on-dark); padding-top: clamp(4rem, 7vw, 6rem); }
+    .footer-top {
+      display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 3fr) minmax(0, 3fr); gap: 3rem clamp(2rem, 5vw, 5rem);
+      padding-bottom: clamp(3rem, 5vw, 4.5rem);
+    }
+    .footer-brand .brand { color: var(--white); }
+    .footer-brand .brand-mark { background: var(--white); color: var(--navy); }
+    .footer-brand .brand-word { color: var(--white); }
+    .footer-name {
+      margin-top: 2rem;
+      font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+      font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.5rem); line-height: .95; color: var(--white);
+    }
+    .footer-desc { margin-top: 1.25rem; max-width: 26rem; color: var(--on-dark-muted); font-size: .9375rem; }
+    .footer-heading {
+      font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--on-dark-muted); margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--on-dark-rule);
+    }
+    .footer-links { display: grid; gap: .625rem; }
+    .footer-links a {
+      font-family: var(--font-display); font-weight: 600; font-size: 1.125rem; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--white); text-decoration: none; transition: color .2s var(--ease);
+    }
+    .footer-links a:hover { color: var(--navy-100); text-decoration: underline; text-underline-offset: 4px; }
+    .footer-connect li { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding-block: .625rem; border-bottom: 1px solid var(--on-dark-rule); }
+    .footer-connect li:first-child { padding-top: 0; }
+    .footer-connect .label {
+      font-family: var(--font-display); font-weight: 600; font-size: 1.125rem; letter-spacing: .08em; text-transform: uppercase; color: var(--white);
+    }
+    .footer-connect .soon { font-size: .75rem; color: var(--on-dark-muted); letter-spacing: .04em; }
+    .footer-bottom {
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem 2rem;
+      padding-block: 1.75rem; border-top: 1px solid var(--on-dark-rule);
+      font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--on-dark-muted);
+    }
+    .footer-bottom .footer-loc { display: inline-flex; align-items: center; gap: .625rem; color: var(--white); font-weight: 600; }
+    .footer-bottom .footer-loc::before { content: ""; width: 8px; height: 8px; background: var(--white); }
+
+    /* ==========================================================
+       REVEAL (restrained)
+       ========================================================== */
+    .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+    .js .reveal.is-visible { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+      .js .reveal { opacity: 1; transform: none; }
+    }
+
+    /* ==========================================================
+       RESPONSIVE
+       ========================================================== */
+    @media (max-width: 1140px) {
+      .nav-toggle { display: inline-flex; }
+      .site-nav {
+        position: fixed; top: var(--header-h); left: 0; right: 0; bottom: 0;
+        flex-direction: column; align-items: stretch; gap: 0;
+        background: var(--white);
+        padding: 1.5rem var(--gutter) 3rem;
+        overflow-y: auto;
+        opacity: 0; visibility: hidden; transform: translateY(-8px);
+        transition: opacity .25s var(--ease), transform .25s var(--ease), visibility 0s linear .25s;
+        border-top: 1px solid var(--gray-200);
+      }
+      .nav-open .site-nav { opacity: 1; visibility: visible; transform: none; transition: opacity .25s var(--ease), transform .25s var(--ease); }
+      .nav-list { flex-direction: column; align-items: stretch; gap: 0; }
+      .nav-list li { border-bottom: 1px solid var(--gray-200); }
+      .nav-list a {
+        display: flex; justify-content: space-between; padding-block: 1.125rem;
+        font-family: var(--font-display); font-weight: 700; font-size: 2rem; letter-spacing: .02em; color: var(--ink);
+      }
+      .nav-list a::after { display: none; }
+      .nav-list .nav-cta-mobile { display: block; border-bottom: 0; margin-top: 2rem; }
+      .nav-list .nav-cta-mobile .btn { width: 100%; font-size: 1.125rem; color: var(--white); justify-content: center; }
+
+      .metrics-grid { grid-template-columns: repeat(3, 1fr); }
+      .metric:nth-child(4) { padding-left: 0; }
+      .metric:nth-child(5) { grid-column: span 2; }
+
+      .services-layout { grid-template-columns: 1fr; }
+      .services-aside { position: static; }
+
+      .lead-grid { grid-template-columns: repeat(2, 1fr); }
+      .levels { grid-template-columns: repeat(2, 1fr); }
+      .level:nth-child(2) { border-right: 0; }
+      .level:nth-child(3) { padding-left: 0; }
+      .level:nth-child(n+3) { border-top: 1px solid var(--gray-200); }
+      .logo-grid { grid-template-columns: repeat(3, 1fr); }
+      .steps { grid-template-columns: repeat(2, 1fr); gap: 3rem 2rem; }
+
+      .cycle-list { flex-direction: column; }
+      .cycle-arrow { width: 2.25rem; height: 2.25rem; transform: rotate(90deg); margin-left: .5rem; }
+
+      .impact-card--a { grid-column: 1 / -1; grid-row: auto; }
+      .impact-card--a .photo { --ratio: 16 / 9; }
+      .impact-card--b { grid-column: 1 / span 6; }
+      .impact-card--c { grid-column: 7 / span 6; }
+
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 820px) {
+      .hero-sub, .intro-head, .lead-head, .field-head, .impact-head, .opp-head { grid-template-columns: 1fr; }
+      .hero-actions { justify-content: flex-start; }
+      .photo--hero { --ratio: 4 / 3; }
+      .hero-thesis { position: relative; right: auto; bottom: auto; width: 100%; }
+      .hero-visual { padding-inline: 0; }
+      .hero-visual .photo--hero { border-left: 0; border-right: 0; }
+
+      .pillars { grid-template-columns: 1fr; }
+      .pillar { min-height: 320px; }
+
+      .lead-photos { grid-template-columns: 1fr; }
+      .lead-photos .photo:last-child { aspect-ratio: 16 / 9; height: auto; min-height: 0; }
+
+      .impact-card--b, .impact-card--c, .impact-card--d { grid-column: 1 / -1; }
+      .impact-card--d { grid-template-columns: 1fr; }
+      .impact-card--d .photo { --ratio: 16 / 9; }
+
+      .opp-grid { grid-template-columns: repeat(2, 1fr); }
+      .paths { grid-template-columns: 1fr; }
+      .path, .path + .path { padding: 2rem 0; border-left: 0; }
+      .path + .path { border-top: 1px solid var(--on-dark-rule); }
+    }
+
+    @media (max-width: 600px) {
+      :root { --header-h: 68px; }
+      .header-cta { display: none; }
+      .brand-mark { width: 42px; height: 42px; font-size: 1rem; }
+
+      .hero-meta span:nth-child(2) { display: none; }
+      .hero-title span { display: inline; }
+      .hero-actions .btn { width: 100%; }
+
+      .metrics-grid { grid-template-columns: 1fr 1fr; }
+      .metric { min-height: 170px; padding-inline: 1rem; }
+      .metric:nth-child(1) { padding-left: 0; }
+      .metric:nth-child(3), .metric:nth-child(4), .metric:nth-child(5) { grid-column: span 2; padding-left: 0; }
+      .metrics-header span:last-child { display: none; }
+
+      .service { grid-template-columns: 1fr; }
+      .service:hover { padding-left: 1rem; }
+
+      .lead-grid { grid-template-columns: 1fr; }
+      .lead-item-index { margin-bottom: 1.5rem; }
+
+      .levels { grid-template-columns: 1fr; }
+      .level, .level:nth-child(n) { border-right: 0; padding-left: 0; padding-right: 0; }
+      .level + .level { border-top: 1px solid var(--gray-200); }
+      .level-name { margin-top: 1.5rem; }
+      .logo-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .steps { grid-template-columns: 1fr; }
+      .step-num { margin-bottom: 1.25rem; }
+
+      .opp-grid { grid-template-columns: 1fr; }
+      .opp { min-height: 160px; gap: 2rem; }
+      .path .btn { width: 100%; }
+
+      .footer-top { grid-template-columns: 1fr; }
+    }
+
+    /* ==========================================================
+       GET INVOLVED PAGE
+       Shared design system above is identical to index.html.
+       Page-specific styles below.
+       ========================================================== */
+
+    /* Active nav state */
+    .nav-list a[aria-current="page"] { color: var(--navy); }
+    .nav-list a[aria-current="page"]::after { transform: scaleX(1); }
+
+    .split-head {
+      display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 2rem 4rem; align-items: end;
+      margin-bottom: clamp(3rem, 5vw, 4.5rem);
+    }
+    .h2 .accent { color: var(--navy); }
+    .on-dark .h2 .accent { color: var(--on-dark-muted); }
+
+    /* ---------- Hero ---------- */
+    .page-hero { padding-top: clamp(2rem, 4vw, 3.5rem); padding-bottom: clamp(3rem, 6vw, 5rem); background: var(--white); }
+    .camp-hero-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 3rem clamp(2.5rem, 5vw, 5rem); align-items: end; }
+    .page-title {
+      font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+      font-size: clamp(3rem, 1.4rem + 5.8vw, 7.25rem);
+      line-height: .88; letter-spacing: -.012em; color: var(--ink);
+    }
+    .page-title span { display: block; }
+    .page-title .accent { color: var(--navy); }
+    .camp-hero-copy .hero-lede { margin-top: clamp(1.75rem, 3vw, 2.5rem); }
+    .camp-hero-actions { display: flex; flex-wrap: wrap; gap: .875rem; margin-top: clamp(2rem, 3.5vw, 2.75rem); }
+    .camp-hero-photo { --ratio: 4 / 5; }
+
+    /* ---------- Proof strip (4 metrics) ---------- */
+    .metrics-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    /* ---------- Positioning ---------- */
+    .position-layout { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: 3rem clamp(3rem, 6vw, 6rem); align-items: start; }
+    .position-aside { position: sticky; top: calc(var(--header-h) + 3rem); }
+    .position-body > p { font-size: clamp(1.0625rem, 1rem + .3vw, 1.1875rem); color: var(--charcoal); max-width: 40rem; }
+    .position-body .position-lead { font-size: clamp(1.25rem, 1.1rem + .6vw, 1.625rem); line-height: 1.45; color: var(--ink); font-weight: 500; }
+    .needs { margin-block: clamp(2rem, 4vw, 3rem); border-top: 1px solid var(--ink); }
+    .needs div {
+      display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 1rem; align-items: baseline;
+      padding-block: 1.125rem; border-bottom: 1px solid var(--gray-200);
+    }
+    .needs dt {
+      font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+      font-size: clamp(1.25rem, 1.05rem + .7vw, 1.625rem); line-height: 1; color: var(--ink);
+    }
+    .needs dd { color: var(--navy); font-weight: 600; font-size: .9375rem; letter-spacing: .02em; }
+    .position-close {
+      margin-top: clamp(2rem, 4vw, 2.75rem); padding: 1.5rem 0 0; border-top: 3px solid var(--navy);
+      font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+      font-size: clamp(1.75rem, 1.3rem + 1.6vw, 2.75rem); line-height: .95; color: var(--navy);
+    }
+
+    /* ---------- Services intro / index ---------- */
+    .services-intro { background: var(--off); border-top: 1px solid var(--gray-200); padding-bottom: 0; }
+    .svc-index { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 1px solid var(--ink); }
+    .svc-index a {
+      display: flex; flex-direction: column; justify-content: space-between; gap: 2.5rem;
+      min-height: 170px; padding: 1.5rem clamp(1rem, 1.6vw, 1.5rem) 1.75rem;
+      border-right: 1px solid var(--gray-200);
+      text-decoration: none; color: var(--ink);
+      transition: background-color .3s var(--ease), color .3s var(--ease);
+    }
+    .svc-index li:first-child a { padding-left: 0; }
+    .svc-index li:last-child a { border-right: 0; }
+    .svc-index-num { display: flex; justify-content: space-between; font-size: .75rem; font-weight: 600; letter-spacing: .18em; color: var(--navy); }
+    .svc-index-name { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.25rem, 1rem + .8vw, 1.75rem); line-height: .98; }
+    .svc-index a:hover { background: var(--navy); color: var(--white); padding-left: clamp(1rem, 1.6vw, 1.5rem); }
+    .svc-index a:hover .svc-index-num { color: var(--on-dark-muted); }
+    .svc-index a:focus-visible { outline-offset: -3px; }
+
+    /* ---------- Service blocks ---------- */
+    .svc { scroll-margin-top: var(--header-h); }
+    .svc--off { background: var(--off); }
+    .svc--white { background: var(--white); border-top: 1px solid var(--gray-200); }
+    .svc-top {
+      display: flex; align-items: baseline; flex-wrap: wrap; gap: .75rem 1.5rem;
+      padding-bottom: 1.25rem; margin-bottom: clamp(2.5rem, 5vw, 4rem);
+      border-bottom: 1px solid var(--ink);
+    }
+    .svc-num { font-family: var(--font-display); font-weight: 800; font-size: clamp(3rem, 2rem + 3vw, 5rem); line-height: .8; color: var(--navy); }
+    .svc-name { font-size: .8125rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--ink); }
+    .svc-tag { margin-left: auto; font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gray-600); }
+    .on-dark .svc-top { border-bottom-color: var(--on-dark-rule); }
+    .on-dark .svc-num, .on-dark .svc-name { color: var(--white); }
+    .on-dark .svc-tag { color: var(--on-dark-muted); }
+
+    .svc-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: 3rem clamp(3rem, 6vw, 6rem); align-items: start; }
+    .svc-grid--rev > :first-child { order: 2; }
+    .svc-copy .h2 { margin-bottom: 1.75rem; }
+    .svc-copy > p { font-size: clamp(1.0625rem, 1rem + .3vw, 1.1875rem); color: var(--charcoal); max-width: 38rem; }
+    .on-dark .svc-copy > p { color: var(--on-dark-muted); }
+
+    .cap-label {
+      display: block; padding-block: 1rem; border-bottom: 1px solid var(--gray-200);
+      font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gray-600);
+    }
+    .cap-list { border-top: 1px solid var(--ink); }
+    .cap-list ul { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2rem; }
+    .cap-list li {
+      display: flex; align-items: center; gap: .875rem;
+      padding-block: .875rem; border-bottom: 1px solid var(--gray-200);
+      font-family: var(--font-display); font-weight: 600; text-transform: uppercase;
+      font-size: 1.1875rem; letter-spacing: .03em; line-height: 1.1; color: var(--ink);
+    }
+    .cap-list li::before { content: ""; flex: 0 0 8px; height: 8px; background: var(--navy); }
+    .on-dark .cap-list { border-top-color: var(--white); }
+    .on-dark .cap-label, .on-dark .cap-list li { border-bottom-color: var(--on-dark-rule); }
+    .on-dark .cap-label { color: var(--on-dark-muted); }
+    .on-dark .cap-list li { color: var(--white); }
+    .on-dark .cap-list li::before { background: var(--white); }
+    .cap-list--3 ul { grid-template-columns: repeat(3, 1fr); }
+
+    /* Strategy → execution flow */
+    .flow { display: flex; align-items: stretch; margin-top: clamp(2.25rem, 4vw, 3rem); }
+    .flow li {
+      flex: 1; display: flex; flex-direction: column; justify-content: space-between; gap: 1.5rem;
+      padding: 1.25rem; background: var(--navy-50); border-left: 3px solid var(--navy);
+    }
+    .flow li span { font-size: .6875rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gray-600); }
+    .flow li strong { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.25rem, 1rem + .8vw, 1.625rem); line-height: 1; color: var(--ink); }
+    .flow li:last-child { background: var(--navy); }
+    .flow li:last-child span { color: var(--on-dark-muted); }
+    .flow li:last-child strong { color: var(--white); }
+    .flow .flow-arrow { flex: 0 0 auto; background: none; border: 0; padding: 0 .625rem; justify-content: center; font-family: var(--font-display); font-size: 1.5rem; color: var(--navy); }
+
+    /* Creative portfolio */
+    .portfolio-head {
+      display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 1rem;
+      margin-top: clamp(4rem, 7vw, 6rem); margin-bottom: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--gray-200);
+    }
+    .portfolio-title { font-size: .8125rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--ink); }
+    .portfolio-note { font-size: .875rem; color: var(--gray-600); }
+    .portfolio { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(1.5rem, 2.5vw, 2rem) clamp(.75rem, 1.5vw, 1.25rem); }
+    .work { margin: 0; }
+    .work .photo { --ratio: 4 / 5; background-color: var(--white); }
+    .work--wide { grid-column: span 2; }
+    .work--wide .photo { --ratio: 8 / 5; }
+    .work figcaption {
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1rem; padding-top: .875rem;
+      font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--ink);
+    }
+    .work figcaption span:last-child { color: var(--gray-600); }
+
+    /* Grassroots — featured section */
+    .field-ops { background: var(--navy); color: var(--white); }
+    .field-title {
+      font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+      font-size: clamp(2.625rem, 1.3rem + 6.6vw, 8.5rem); line-height: .86; letter-spacing: -.015em;
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .field-title span { display: block; }
+    .field-feature { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 2.5rem clamp(2rem, 4vw, 4rem); align-items: stretch; }
+    .field-photo { --ratio: 4 / 3; }
+    .field-stat { display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--white); }
+    .field-stat-value {
+      font-family: var(--font-display); font-weight: 800; line-height: .82; letter-spacing: -.02em;
+      font-size: clamp(4rem, 2rem + 5.5vw, 8.5rem); white-space: nowrap;
+    }
+    .field-stat-label { display: block; margin-top: 1rem; font-size: .8125rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--on-dark-muted); }
+    .field-stat > p { color: var(--on-dark-muted); font-size: clamp(1.0625rem, 1rem + .3vw, 1.1875rem); }
+    .field-lower { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 2.5rem clamp(2rem, 4vw, 4rem); margin-top: clamp(3rem, 5vw, 4.5rem); align-items: start; }
+    .field-lower > p { color: var(--on-dark); font-size: clamp(1.125rem, 1rem + .5vw, 1.375rem); line-height: 1.5; }
+
+    /* Data — research questions */
+    .questions { margin-top: clamp(2.25rem, 4vw, 3rem); border-top: 1px solid var(--ink); }
+    .questions li {
+      display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: 1rem; align-items: baseline;
+      padding-block: 1.125rem; border-bottom: 1px solid var(--gray-200);
+    }
+    .questions li span { font-size: .75rem; font-weight: 600; letter-spacing: .18em; color: var(--navy); }
+    .questions li p { font-family: var(--font-display); font-weight: 600; text-transform: uppercase; font-size: clamp(1.25rem, 1.05rem + .7vw, 1.625rem); line-height: 1.05; color: var(--ink); }
+
+    /* Events — stat + phases */
+    .event-stat { display: flex; align-items: flex-end; gap: 1.5rem; flex-wrap: wrap; margin-top: clamp(2.25rem, 4vw, 3rem); padding-top: 1.5rem; border-top: 1px solid var(--ink); }
+    .event-stat-value { font-family: var(--font-display); font-weight: 800; font-size: clamp(4rem, 2.6rem + 4.4vw, 7.5rem); line-height: .82; color: var(--navy); letter-spacing: -.02em; }
+    .event-stat-label { display: block; font-size: .8125rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--ink); }
+    .event-stat-note { display: block; margin-top: .5rem; font-size: .9375rem; color: var(--gray-600); max-width: 22rem; }
+    .event-photo { --ratio: 4 / 3; }
+    .phases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: clamp(3rem, 5vw, 4.5rem); border-top: 1px solid var(--ink); }
+    .phase { padding: 1.5rem clamp(1rem, 2vw, 2rem) 1.75rem; border-right: 1px solid var(--gray-200); }
+    .phase:first-child { padding-left: 0; }
+    .phase:last-child { border-right: 0; }
+    .phase-label { display: block; margin-bottom: 1.5rem; font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--navy); }
+    .phase h3 { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.75rem, 1.3rem + 1.4vw, 2.5rem); line-height: .95; margin-bottom: .875rem; }
+    .phase p { color: var(--gray-600); font-size: .9688rem; }
+
+    /* ---------- Integrated support ---------- */
+    .integrated { border-top: 1px solid var(--gray-200); }
+    .integrated-layout { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 3rem clamp(3rem, 6vw, 6rem); align-items: start; }
+    .integrated-copy > p:not(.eyebrow) { font-size: clamp(1.0625rem, 1rem + .3vw, 1.1875rem); color: var(--charcoal); max-width: 40rem; margin-top: 1.75rem; }
+    .examples { margin-top: clamp(2.25rem, 4vw, 3rem); border-top: 1px solid var(--ink); }
+    .examples li { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 1rem 1.5rem; align-items: baseline; padding-block: 1.25rem; border-bottom: 1px solid var(--gray-200); }
+    .examples strong { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.25rem, 1.05rem + .7vw, 1.625rem); line-height: 1; color: var(--ink); }
+    .examples span { color: var(--gray-600); }
+    .chain-wrap { position: sticky; top: calc(var(--header-h) + 3rem); }
+    .chain-label { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gray-600); }
+    .chain li.chain-step {
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      padding: 1.25rem 1.5rem; background: var(--navy); color: var(--white);
+      font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+      font-size: clamp(1.5rem, 1.2rem + 1vw, 2.125rem); line-height: 1;
+      transition: background-color .3s var(--ease);
+    }
+    .chain li.chain-step:hover { background: var(--navy-700); }
+    .chain li.chain-step small { font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-spacing: .18em; color: var(--on-dark-muted); }
+    .chain li.chain-arrow { display: grid; place-items: center; height: 2.25rem; font-family: var(--font-display); font-size: 1.375rem; color: var(--navy); }
+    .chain-note { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--gray-200); font-size: .9375rem; color: var(--gray-600); }
+
+    /* ---------- Process ---------- */
+    .camp-process .steps { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .camp-process .step .h3 { font-size: clamp(1.75rem, 1.2rem + 1.4vw, 2.75rem); }
+
+    /* ---------- Experience tiers ---------- */
+    .tiers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--ink); }
+    .tier { position: relative; padding: 1.75rem clamp(1rem, 2.5vw, 2.5rem) 2.25rem; border-right: 1px solid var(--gray-200); }
+    .tier:first-child { padding-left: 0; }
+    .tier:last-child { border-right: 0; }
+    .tier::before {
+      content: ""; position: absolute; left: 0; right: 0; top: -1px; height: 4px;
+      background: var(--navy); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease);
+    }
+    .tier:hover::before { transform: scaleX(1); }
+    .tier-index { font-size: .75rem; font-weight: 600; letter-spacing: .18em; color: var(--gray-600); }
+    .tier-name {
+      display: block; margin: 2.5rem 0 1.25rem;
+      font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+      font-size: clamp(2.75rem, 1.5rem + 3.4vw, 5.5rem); line-height: .85; letter-spacing: -.01em; color: var(--navy);
+    }
+    .tier p { color: var(--gray-600); max-width: 26rem; }
+    .experience .selected { margin-top: clamp(4rem, 7vw, 6rem); }
+
+    /* ---------- Why YLIP ---------- */
+    .why { background: var(--ink); color: var(--white); }
+    .reason-list { border-top: 1px solid var(--on-dark-rule); }
+    .reason {
+      display: grid; grid-template-columns: 5rem minmax(0, 5fr) minmax(0, 6fr); gap: 1rem 2rem; align-items: baseline;
+      padding-block: clamp(1.75rem, 3vw, 2.5rem); border-bottom: 1px solid var(--on-dark-rule);
+    }
+    .reason-num { font-family: var(--font-display); font-weight: 700; font-size: 1.125rem; letter-spacing: .1em; color: var(--on-dark-muted); transition: color .3s var(--ease); }
+    .reason:hover .reason-num { color: var(--white); }
+    .reason-title { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.75rem, 1.3rem + 1.6vw, 2.75rem); line-height: .95; }
+    .reason p { color: var(--on-dark-muted); font-size: clamp(1.0625rem, 1rem + .3vw, 1.1875rem); max-width: 34rem; }
+
+    /* ---------- Proof (bottom) ---------- */
+    .proof-head .serif-quote { color: var(--charcoal); padding-left: 1.5rem; border-left: 2px solid var(--navy); }
+    .proof-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--gray-200); }
+    .proof-item { display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; padding: 2rem clamp(1rem, 2vw, 2rem) 2.25rem; border-right: 1px solid var(--gray-200); }
+    .proof-item:first-child { padding-left: 0; }
+    .proof-item:last-child { border-right: 0; }
+    .proof-value { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: clamp(2.75rem, 1.8rem + 2.6vw, 4.5rem); line-height: .85; letter-spacing: -.01em; color: var(--navy); white-space: nowrap; }
+    .proof-value--text { white-space: normal; font-size: clamp(1.75rem, 1.35rem + 1.2vw, 2.5rem); line-height: .95; letter-spacing: .01em; }
+    .proof-label { font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; line-height: 1.5; color: var(--gray-600); padding-top: 1rem; border-top: 1px solid var(--gray-200); }
+
+    /* ---------- Final CTA ---------- */
+    .final-title--sm { font-size: clamp(2.75rem, 1.2rem + 5.8vw, 7.5rem); margin-bottom: 1.25rem; }
+    .final-title--sm span { display: block; }
+    .cta-kicker {
+      font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+      font-size: clamp(1.75rem, 1.2rem + 2.2vw, 3.25rem); line-height: 1; color: var(--on-dark-muted);
+      margin-bottom: clamp(3rem, 5vw, 4.5rem);
+    }
+    .cta-row {
+      display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 2rem 4rem; align-items: end;
+      padding-top: clamp(2rem, 3.5vw, 3rem); border-top: 1px solid var(--on-dark-rule);
+    }
+    .cta-row p { font-size: clamp(1.125rem, 1rem + .5vw, 1.375rem); line-height: 1.5; color: var(--on-dark); max-width: 38rem; }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: .875rem; justify-content: flex-end; }
+
+    /* ---------- Campaigns responsive ---------- */
+    @media (max-width: 1140px) {
+      .metrics-grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .metrics-grid--4 .metric:nth-child(3) { padding-left: 0; }
+      .metrics-grid--4 .metric:nth-child(4) { padding-left: clamp(1.25rem, 2vw, 2rem); grid-column: auto; }
+      .position-layout, .integrated-layout { grid-template-columns: 1fr; }
+      .position-aside, .chain-wrap { position: static; }
+      .svc-index { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .svc-index li:nth-child(3) a { border-right: 0; }
+      .svc-index li:nth-child(4) a { padding-left: 0; }
+      .svc-index li:nth-child(n+4) a { border-top: 1px solid var(--gray-200); }
+      .svc-grid { grid-template-columns: 1fr; }
+      .svc-grid--rev > :first-child { order: 0; }
+      .field-feature, .field-lower { grid-template-columns: 1fr; }
+      .cap-list--3 ul { grid-template-columns: 1fr 1fr; }
+      .camp-process .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .reason { grid-template-columns: 4rem minmax(0, 1fr); }
+      .reason p { grid-column: 2; }
+      .proof-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .proof-item:nth-child(2) { border-right: 0; }
+      .proof-item:nth-child(3) { padding-left: 0; }
+      .proof-item:nth-child(n+3) { border-top: 1px solid var(--gray-200); }
+    }
+
+    @media (max-width: 820px) {
+      .split-head, .camp-hero-grid, .cta-row { grid-template-columns: 1fr; }
+      .camp-hero-photo { --ratio: 4 / 3; }
+      .cta-actions { justify-content: flex-start; }
+      .tiers, .phases { grid-template-columns: 1fr; }
+      .tier, .phase { padding-left: 0; padding-right: 0; border-right: 0; }
+      .tier + .tier, .phase + .phase { border-top: 1px solid var(--gray-200); }
+      .tier-name { margin-top: 1.5rem; }
+      .portfolio { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 600px) {
+      .metrics-grid--4 { grid-template-columns: 1fr 1fr; }
+      .metrics-grid--4 .metric:nth-child(3), .metrics-grid--4 .metric:nth-child(4) { grid-column: span 2; padding-left: 0; }
+      .camp-hero-actions .btn, .cta-actions .btn { width: 100%; }
+      .needs div { grid-template-columns: 1fr; gap: .375rem; }
+      .svc-index { grid-template-columns: 1fr; }
+      .svc-index a, .svc-index li:nth-child(n) a { min-height: 0; flex-direction: row; align-items: center; padding: 1.125rem 0; border-right: 0; border-top: 0; border-bottom: 1px solid var(--gray-200); }
+      .svc-index-num { flex-direction: column; gap: .25rem; min-width: 3rem; }
+      .svc-tag { display: none; }
+      .cap-list ul, .cap-list--3 ul { grid-template-columns: 1fr; }
+      .flow { flex-direction: column; }
+      .flow .flow-arrow { padding: .375rem 0; transform: rotate(90deg); align-self: flex-start; margin-left: 1rem; }
+      .examples li { grid-template-columns: 1fr; gap: .5rem; }
+      .camp-process .steps { grid-template-columns: 1fr; }
+      .reason { grid-template-columns: 1fr; }
+      .reason p { grid-column: auto; }
+      .proof-grid { grid-template-columns: 1fr; }
+      .proof-item, .proof-item:nth-child(n) { padding-left: 0; padding-right: 0; border-right: 0; }
+      .proof-item + .proof-item { border-top: 1px solid var(--gray-200); }
+      .work--wide { grid-column: span 2; }
+    }
+
+    /* ==========================================================
+       LEADERSHIP PAGE — additional components
+       ========================================================== */
+    .opening { border-top: 1px solid var(--gray-200); }
+    .contrast { display: grid; grid-template-columns: 1fr 1fr; margin-block: clamp(2rem, 4vw, 3rem); border: 1px solid var(--gray-200); }
+    .contrast > div { padding: clamp(1.25rem, 2.5vw, 2rem); }
+    .contrast-label { display: block; margin-bottom: 1.5rem; font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
+    .contrast p { font-family: var(--font-display); font-weight: 600; text-transform: uppercase; font-size: clamp(1.25rem, 1.05rem + .7vw, 1.625rem); line-height: 1.05; }
+    .contrast-old { background: var(--off); color: var(--gray-600); }
+    .contrast-old .contrast-label { color: var(--gray-600); }
+    .contrast-new { background: var(--navy); color: var(--white); }
+    .contrast-new .contrast-label { color: var(--on-dark-muted); }
+
+    /* Philosophy */
+    .philosophy { background: var(--navy); color: var(--white); }
+    .philosophy-lede { max-width: 44rem; margin-bottom: clamp(3rem, 5vw, 4.5rem); font-size: clamp(1.25rem, 1.05rem + .8vw, 1.75rem); line-height: 1.4; color: var(--on-dark); }
+    .understand { border-top: 1px solid var(--on-dark-rule); }
+    .understand li {
+      display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 5fr) minmax(0, 5fr); gap: .5rem 2rem; align-items: baseline;
+      padding-block: clamp(1.25rem, 2.5vw, 1.875rem); border-bottom: 1px solid var(--on-dark-rule);
+    }
+    .understand-pre { font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--on-dark-muted); }
+    .understand-word { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: clamp(1.75rem, 1.1rem + 2.2vw, 3.5rem); line-height: .9; color: var(--white); overflow-wrap: break-word; }
+    .understand-post { font-size: clamp(1.0625rem, 1rem + .4vw, 1.3125rem); color: var(--on-dark-muted); }
+    .understand-post strong { color: var(--white); font-weight: 600; }
+    .understand li:hover .understand-pre { color: var(--white); }
+
+    .svc-index--6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .svc-index--6 li { min-width: 0; }
+    .svc-index--6 a { min-height: 150px; }
+    .svc-index--6 li:nth-child(3) a, .svc-index--6 li:nth-child(6) a { border-right: 0; }
+    .svc-index--6 li:nth-child(4) a { padding-left: 0; }
+    .svc-index--6 li:nth-child(n+4) a { border-top: 1px solid var(--gray-200); }
+    .svc-index--6 .svc-index-name { overflow-wrap: break-word; }
+
+    .note { margin-top: 1.5rem; padding-left: 1rem; border-left: 2px solid var(--gray-200); font-size: .875rem; color: var(--gray-600); max-width: 36rem; }
+    .gov-aside .field-stat-label { margin-top: 0; margin-bottom: 1.25rem; }
+    .gov-aside .gov-big { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: clamp(2rem, 1.3rem + 2vw, 3.25rem); line-height: .9; color: var(--white); overflow-wrap: break-word; }
+    .lead-svc-photo { --ratio: 4 / 3; }
+
+    /* Pipeline (dark) */
+    .growth { background: var(--ink); color: var(--white); }
+    .pipe li.pipe-step {
+      display: grid; grid-template-columns: 4rem minmax(0, 4fr) minmax(0, 6fr); gap: .5rem 2rem; align-items: baseline;
+      margin-left: calc(var(--i) * 4%);
+      padding: clamp(1.25rem, 2.2vw, 1.75rem) clamp(1.25rem, 2vw, 1.75rem);
+      background: rgba(255, 255, 255, var(--a)); border-left: 3px solid var(--white);
+    }
+    .pipe-num { font-family: var(--font-display); font-weight: 700; font-size: 1.125rem; letter-spacing: .1em; color: var(--on-dark-muted); }
+    .pipe-title { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.75rem, 1.3rem + 1.6vw, 2.75rem); line-height: .95; }
+    .pipe-step p { color: var(--on-dark-muted); }
+    .pipe li.pipe-step:last-child { background: var(--white); color: var(--navy); border-left-color: var(--navy); }
+    .pipe li.pipe-step:last-child .pipe-num, .pipe li.pipe-step:last-child p { color: var(--charcoal); }
+    .pipe li.pipe-arrow { margin-left: calc(var(--i) * 4% + 1.25rem); height: 2.25rem; display: flex; align-items: center; font-family: var(--font-display); font-size: 1.375rem; color: var(--on-dark-muted); }
+    .pipe-concept { margin-top: clamp(3.5rem, 6vw, 5rem); padding-top: 2rem; border-top: 1px solid var(--on-dark-rule); }
+    .pipe-concept p { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(2rem, 1.2rem + 3.2vw, 4.25rem); line-height: .92; }
+    .pipe-concept p:first-child { color: var(--on-dark-muted); }
+
+    /* Skills */
+    .skills-section { background: var(--off); border-top: 1px solid var(--gray-200); }
+    .skills { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); }
+    .skill { background: var(--white); padding: clamp(1.5rem, 2.5vw, 2.25rem); min-height: 230px; display: flex; flex-direction: column; transition: background-color .3s var(--ease), color .3s var(--ease); }
+    .skill-index { font-size: .75rem; font-weight: 600; letter-spacing: .18em; color: var(--navy); margin-bottom: auto; padding-bottom: 2.5rem; }
+    .skill h3 { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); line-height: .95; margin-bottom: .75rem; }
+    .skill p { font-size: .9375rem; color: var(--gray-600); transition: color .3s var(--ease); }
+    .skill:hover { background: var(--navy); color: var(--white); }
+    .skill:hover .skill-index, .skill:hover p { color: var(--on-dark-muted); }
+
+    /* Proof band */
+    .proof-band .serif-quote { color: var(--on-dark); padding-left: 1.5rem; border-left: 2px solid var(--white); }
+    .proof-band .metrics-grid { border-top: 1px solid var(--on-dark-rule); }
+
+    /* Who is YLIP for */
+    .traits { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2rem; margin-block: clamp(2rem, 4vw, 3rem); border-top: 1px solid var(--ink); }
+    .traits li { display: flex; align-items: center; gap: .875rem; padding-block: 1rem; border-bottom: 1px solid var(--gray-200); font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.375rem, 1.15rem + .8vw, 1.875rem); line-height: 1; }
+    .traits li::before { content: ""; flex: 0 0 8px; height: 8px; background: var(--navy); }
+    .who-quote { margin-top: clamp(2rem, 4vw, 2.75rem); padding-top: 1.5rem; border-top: 3px solid var(--navy); }
+    .who-quote p { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.625rem, 1.2rem + 1.6vw, 2.625rem); line-height: .98; color: var(--navy); }
+
+    /* Areas of interest */
+    .areas { background: var(--off); border-top: 1px solid var(--gray-200); }
+    .opp-grid--5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .opp-grid--5 .opp { min-height: 190px; gap: 2.5rem; }
+    .opp-grid--5 li { min-width: 0; }
+    .opp-grid--5 .opp-name { font-size: clamp(1.125rem, .8rem + .7vw, 1.5rem); overflow-wrap: break-word; }
+
+    /* Parents & educators */
+    .parents { border-top: 1px solid var(--gray-200); }
+    .parents-layout { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 3rem clamp(3rem, 6vw, 6rem); align-items: start; }
+    .h2--sm { font-size: clamp(2.25rem, 1.5rem + 2.8vw, 3.75rem); }
+    .parents-body > p { font-size: clamp(1.0625rem, 1rem + .3vw, 1.1875rem); color: var(--charcoal); max-width: 40rem; margin-bottom: 2rem; }
+
+    @media (max-width: 1140px) {
+      .understand li { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+      .understand-pre { grid-column: 1 / -1; }
+      .pipe li.pipe-step { grid-template-columns: 3.5rem minmax(0, 1fr); }
+      .pipe-step p { grid-column: 2; }
+      .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .opp-grid--5 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .parents-layout { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 820px) {
+      .contrast { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .understand li { grid-template-columns: 1fr; }
+      .pipe li.pipe-step { margin-left: calc(var(--i) * 3%); grid-template-columns: 1fr; }
+      .pipe-step p { grid-column: auto; }
+      .pipe li.pipe-arrow { margin-left: calc(var(--i) * 3% + 1rem); }
+      .skills { grid-template-columns: 1fr; }
+      .skill { min-height: 0; }
+      .opp-grid--5 { grid-template-columns: 1fr; }
+      .svc-index--6 { grid-template-columns: 1fr; }
+      .svc-index--6 li:nth-child(n) a { border-top: 0; }
+      .traits { grid-template-columns: 1fr; }
+    }
+
+    /* ==========================================================
+       IMPACT PAGE — additional components
+       ========================================================== */
+    .page-title--3 { font-size: clamp(2.75rem, 1rem + 5.4vw, 6.5rem); }
+
+    /* Big numbers */
+    .bignums { background: var(--navy); color: var(--white); padding-block: clamp(3.5rem, 7vw, 6rem); }
+    .bignums-head { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-bottom: 1.25rem; font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--on-dark-muted); }
+    .bignums-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--on-dark-rule); border-top: 1px solid var(--on-dark-rule); border-bottom: 1px solid var(--on-dark-rule); }
+    .bignum { background: var(--navy); padding: clamp(2rem, 4vw, 3.5rem) clamp(1.25rem, 3vw, 3rem) clamp(1.75rem, 3vw, 2.5rem); display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; }
+    .bignum:nth-child(odd) { padding-left: 0; }
+    .bignum-value { font-family: var(--font-display); font-weight: 800; line-height: .8; letter-spacing: -.025em; font-size: clamp(3.5rem, 1.2rem + 7.4vw, 9.25rem); white-space: nowrap; }
+    .bignum-value--text { white-space: normal; font-size: clamp(2.5rem, 1.2rem + 4.2vw, 5.75rem); line-height: .88; text-transform: uppercase; letter-spacing: -.01em; }
+    .bignum-label { display: block; padding-top: 1rem; border-top: 1px solid var(--on-dark-rule); font-size: .8125rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--on-dark-muted); max-width: 28rem; }
+
+    /* Two directions */
+    .twoway { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: stretch; margin-top: clamp(2rem, 4vw, 3rem); border: 1px solid var(--ink); }
+    .twoway > div { padding: clamp(1.25rem, 2.5vw, 2rem); }
+    .twoway span { display: block; margin-bottom: 1.25rem; font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gray-600); }
+    .twoway p { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.25rem, 1rem + .9vw, 1.875rem); line-height: .95; color: var(--ink); overflow-wrap: break-word; }
+    .twoway > div:last-child { background: var(--navy); }
+    .twoway > div:last-child span { color: var(--on-dark-muted); }
+    .twoway > div:last-child p { color: var(--white); }
+    .twoway-x { display: grid; place-items: center; padding: 0 1rem !important; border-inline: 1px solid var(--ink); font-family: var(--font-display); font-size: 1.75rem; color: var(--navy); }
+    .twoway-note { margin-top: 1rem; font-size: .875rem; color: var(--gray-600); }
+
+    /* Campaign impact extras */
+    .quote-line { font-family: var(--font-serif); font-style: italic; font-size: clamp(1.25rem, 1.05rem + .8vw, 1.75rem); line-height: 1.35; color: var(--on-dark); }
+    .team-photo { --ratio: 16 / 10; }
+    .note-dark { margin-top: 1.5rem; padding-left: 1rem; border-left: 2px solid var(--on-dark-rule); font-size: .875rem; color: var(--on-dark-muted); max-width: 36rem; }
+
+    /* Ledger (selected work) */
+    .ledger-section { background: var(--off); border-top: 1px solid var(--gray-200); }
+    .ledger { border-top: 1px solid var(--ink); }
+    .ledger-row { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 4fr) minmax(0, 4fr); gap: 1rem 2rem; align-items: center; padding-block: 1.25rem; border-bottom: 1px solid var(--gray-200); }
+    .ledger-head { padding-block: 1rem; font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gray-600); }
+    .ledger-name { display: flex; align-items: center; gap: 1rem; }
+    .ledger-logo { position: relative; flex: 0 0 56px; height: 56px; background: var(--white); border: 1px solid var(--gray-200); overflow: hidden; }
+    .ledger-logo::before { content: ""; position: absolute; inset: 0; background-image: repeating-linear-gradient(135deg, rgba(24, 6, 92, .07) 0 1px, transparent 1px 10px); }
+    .ledger-logo img { position: relative; width: 100%; height: 100%; object-fit: contain; padding: 6px; }
+    .ledger-row--placeholder .ledger-title { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: 1.375rem; line-height: 1; color: var(--gray-400); }
+    .ledger-row--placeholder .ledger-cell { font-size: .8125rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gray-400); }
+    .support-key { display: flex; flex-wrap: wrap; align-items: center; gap: .625rem; margin-top: 2.25rem; }
+    .support-key-label { margin-right: .75rem; font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gray-600); }
+    .tag { display: inline-block; padding: .5rem .75rem; border: 1px solid var(--navy); border-radius: var(--radius); font-size: .6875rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--navy); background: var(--white); }
+
+    /* Access → experience statement */
+    .stairs { margin-top: clamp(3.5rem, 6vw, 5rem); border-top: 1px solid var(--ink); }
+    .stairs li { padding-block: clamp(1.25rem, 2.5vw, 1.75rem); padding-left: calc(var(--i) * 8%); border-bottom: 1px solid var(--gray-200); font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.625rem, 1.1rem + 2vw, 3.25rem); line-height: .95; color: var(--gray-400); }
+    .stairs li strong { color: var(--navy); font-weight: 700; }
+    .stairs li:last-child { color: var(--ink); }
+
+    /* Events */
+    .events-dark { background: var(--ink); color: var(--white); }
+    .events-title { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; line-height: .82; letter-spacing: -.02em; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+    .events-title .big { display: block; font-size: clamp(6rem, 2.5rem + 14vw, 17rem); }
+    .events-title .small { display: block; font-size: clamp(2.25rem, 1.3rem + 3.6vw, 5rem); color: var(--on-dark-muted); }
+    .events-layout { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 3rem clamp(2.5rem, 5vw, 5rem); align-items: start; }
+    .events-layout > div:first-child p { color: var(--on-dark); font-size: clamp(1.0625rem, 1rem + .4vw, 1.3125rem); line-height: 1.55; }
+    .photo-trio { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: clamp(.75rem, 1.5vw, 1.25rem); aspect-ratio: 16 / 11; }
+    .photo-trio .photo { aspect-ratio: auto; height: 100%; }
+    .photo-trio .photo:first-child { grid-row: span 2; }
+
+    /* 1,300+ hours */
+    .hours { background: var(--navy); color: var(--white); padding-block: clamp(5rem, 11vw, 10rem); overflow: hidden; }
+    .hours-value { font-family: var(--font-display); font-weight: 800; line-height: .78; letter-spacing: -.03em; font-size: clamp(6.5rem, 1rem + 22vw, 22rem); white-space: nowrap; padding-bottom: .12em; }
+    .hours-row { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 2rem 4rem; align-items: end; margin-top: clamp(2rem, 4vw, 3.5rem); padding-top: 1.75rem; border-top: 1px solid var(--white); }
+    .hours-label { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.75rem, 1.2rem + 2vw, 3.25rem); line-height: .92; }
+    .hours-row p { color: var(--on-dark-muted); font-size: clamp(1.0625rem, 1rem + .4vw, 1.3125rem); line-height: 1.55; max-width: 38rem; }
+
+    /* Two-sided impact */
+    .sides-section { background: var(--off); border-top: 1px solid var(--gray-200); }
+    .sides { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--gray-200); }
+    .side { padding-block: clamp(2rem, 4vw, 3rem); min-width: 0; }
+    .side-label { display: block; margin-bottom: 2rem; font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--navy); }
+    .side-title { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: clamp(2.25rem, 1.2rem + 3.4vw, 4.75rem); line-height: .86; margin-bottom: 1.5rem; color: var(--ink); overflow-wrap: break-word; }
+    .side p { color: var(--gray-600); max-width: 32rem; }
+    .sides-link { display: flex; flex-direction: column; align-items: center; padding-inline: clamp(1.5rem, 4vw, 4rem); }
+    .sides-link::before, .sides-link::after { content: ""; flex: 1; width: 1px; background: var(--gray-200); }
+    .sides-link span { display: grid; place-items: center; width: 64px; height: 64px; margin-block: 1rem; border: 1px solid var(--navy); font-family: var(--font-display); font-size: 1.75rem; color: var(--navy); }
+    .thesis-band-inline { margin-top: clamp(3rem, 5vw, 4.5rem); background: var(--navy); }
+    .thesis-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--on-dark-rule); }
+    .thesis-list li { background: var(--navy); padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.25rem, 2.5vw, 2.25rem); display: flex; flex-direction: column; gap: 1.25rem; }
+    .thesis-index { font-size: .75rem; font-weight: 600; letter-spacing: .18em; color: var(--on-dark-muted); }
+    .thesis-text { font-family: var(--font-display); font-weight: 600; text-transform: uppercase; font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.25rem); line-height: 1; color: var(--on-dark-muted); }
+    .thesis-list li:last-child .thesis-text { color: var(--white); }
+
+    /* Ladder: participation → leadership */
+    .ladder { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); align-items: end; gap: clamp(.375rem, .8vw, .625rem); height: clamp(280px, 30vw, 380px); border-bottom: 1px solid var(--ink); }
+    .ladder li { height: var(--h); display: flex; flex-direction: column; justify-content: space-between; padding: clamp(.875rem, 1.4vw, 1.25rem); min-width: 0; }
+    .ladder-top { display: flex; justify-content: space-between; font-size: .75rem; font-weight: 600; letter-spacing: .16em; }
+    .ladder-name { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(.9375rem, .55rem + .85vw, 1.375rem); line-height: 1; overflow-wrap: break-word; hyphens: auto; }
+    .ladder .r1 { --h: 26%; --w: 50%; background: var(--navy-50); color: var(--navy); border: 1px solid var(--navy-100); border-bottom: 0; }
+    .ladder .r2 { --h: 40%; --w: 60%; background: var(--navy-100); color: var(--navy); }
+    .ladder .r3 { --h: 54%; --w: 70%; background: #CFC8E8; color: var(--navy); }
+    .ladder .r4 { --h: 70%; --w: 80%; background: var(--navy-700); color: var(--white); }
+    .ladder .r5 { --h: 85%; --w: 90%; background: var(--navy); color: var(--white); }
+    .ladder .r6 { --h: 100%; --w: 100%; background: var(--ink); color: var(--white); }
+    .ladder-caption { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gray-600); }
+
+    /* Gallery */
+    .gallery-section { background: var(--off); border-top: 1px solid var(--gray-200); }
+    .gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: clamp(170px, 19vw, 280px); grid-auto-flow: dense; gap: clamp(.75rem, 1.5vw, 1.25rem); }
+    .gallery .photo { aspect-ratio: auto; height: 100%; background-color: var(--white); }
+    .g-xl { grid-column: span 2; grid-row: span 2; }
+    .g-tall { grid-row: span 2; }
+    .g-wide { grid-column: span 2; }
+    .g-tag { position: absolute; top: 1.25rem; left: 1.25rem; padding: .375rem .625rem; background: var(--navy); color: var(--white); font-size: .6875rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; z-index: 2; }
+
+    /* Timeline */
+    .timeline-section { border-top: 1px solid var(--gray-200); }
+    .timeline { position: relative; margin-left: 7px; border-left: 1px solid var(--ink); }
+    .timeline li { position: relative; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: .75rem 2.5rem; align-items: baseline; padding: clamp(1.5rem, 3vw, 2.25rem) 0 clamp(1.5rem, 3vw, 2.25rem) clamp(2rem, 4vw, 3.5rem); border-bottom: 1px solid var(--gray-200); }
+    .timeline li::before { content: ""; position: absolute; left: -8px; top: clamp(1.9rem, 3.4vw, 2.7rem); width: 15px; height: 15px; background: var(--white); border: 1px solid var(--ink); }
+    .timeline li:last-child::before { background: var(--navy); border-color: var(--navy); }
+    .tl-label { display: flex; align-items: baseline; gap: 1rem; }
+    .tl-label span { font-size: .75rem; font-weight: 600; letter-spacing: .18em; color: var(--gray-600); }
+    .tl-label strong { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: clamp(2.25rem, 1.5rem + 2.8vw, 4.25rem); line-height: .85; color: var(--ink); }
+    .timeline li:last-child .tl-label strong { color: var(--navy); }
+    .timeline li p { color: var(--gray-600); font-size: clamp(1rem, .95rem + .3vw, 1.1875rem); max-width: 38rem; }
+
+    /* Final statement */
+    .statement { background: var(--ink); color: var(--white); }
+    .statement-title { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: clamp(2.25rem, 1rem + 6.4vw, 8.5rem); line-height: .86; letter-spacing: -.015em; margin-bottom: clamp(2.5rem, 5vw, 4rem); overflow-wrap: break-word; }
+    .statement-title span { display: block; }
+    .statement-title span:first-child { color: var(--on-dark-muted); }
+    .statement-text { max-width: 58rem; padding-top: 2rem; border-top: 1px solid var(--on-dark-rule); font-size: clamp(1.25rem, 1.05rem + .9vw, 1.875rem); line-height: 1.45; color: var(--on-dark-muted); }
+    .statement-text strong { color: var(--white); font-weight: 600; }
+
+    @media (max-width: 1140px) {
+      .events-layout { grid-template-columns: 1fr; }
+      .hours-row { grid-template-columns: 1fr; }
+      .timeline li { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 820px) {
+      .bignums-grid { grid-template-columns: 1fr; }
+      .bignum, .bignum:nth-child(odd) { padding-left: 0; padding-right: 0; }
+      .twoway, .sides { grid-template-columns: 1fr; }
+      .twoway-x { padding: .75rem !important; border-inline: 0; border-block: 1px solid var(--ink); }
+      .twoway-x { transform: none; }
+      .sides-link { flex-direction: row; padding-inline: 0; }
+      .sides-link::before, .sides-link::after { width: auto; height: 1px; }
+      .sides-link span { margin: 0 1rem; transform: rotate(90deg); }
+      .thesis-list { grid-template-columns: 1fr; }
+      .ledger-head { display: none; }
+      .ledger-row { grid-template-columns: 1fr; gap: .5rem; }
+      .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 170px; }
+      .stairs li { padding-left: calc(var(--i) * 5%); }
+    }
+    @media (max-width: 600px) {
+      .ladder { grid-template-columns: 1fr; height: auto; align-items: stretch; border-bottom: 0; gap: .5rem; }
+      .ladder li { height: auto; width: var(--w); flex-direction: row; align-items: center; gap: 1rem; min-height: 56px; }
+      .ladder .r1 { border-bottom: 1px solid var(--navy-100); --w: 68%; }
+      .ladder .r2 { --w: 74%; } .ladder .r3 { --w: 80%; } .ladder .r4 { --w: 87%; } .ladder .r5 { --w: 93%; }
+      .ladder-top { order: 2; margin-left: auto; }
+      .ladder-name { font-size: 1.0625rem; }
+      .photo-trio { aspect-ratio: auto; grid-template-columns: 1fr; grid-template-rows: auto; }
+      .photo-trio .photo { aspect-ratio: 4 / 3; height: auto; }
+      .photo-trio .photo:first-child { grid-row: auto; }
+      .hours-value { font-size: clamp(5rem, 1rem + 22vw, 8rem); }
+    }
+    .svc-copy > p.eyebrow { font-size: .75rem; color: var(--navy); max-width: none; }
+
+    /* ==========================================================
+       OPPORTUNITIES PAGE — additional components
+       ========================================================== */
+    .svc-copy > p.eyebrow, .position-body > p.eyebrow { font-size: .75rem; color: var(--navy); max-width: none; }
+
+    /* Pathway jump bar */
+    .jump { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: clamp(2.5rem, 4vw, 3.5rem); }
+    .jump a { display: inline-flex; align-items: center; gap: .5rem; padding: .625rem .875rem; border: 1px solid var(--gray-200); background: var(--white); text-decoration: none; font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); transition: background-color .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease); }
+    .jump a span { color: var(--navy); }
+    .jump a:hover { background: var(--navy); border-color: var(--navy); color: var(--white); }
+    .jump a:hover span { color: var(--on-dark-muted); }
+
+    /* Pathways */
+    .pathways { border-top: 1px solid var(--ink); }
+    .pathway {
+      display: grid; grid-template-columns: 4.5rem minmax(0, 4fr) minmax(0, 6fr); gap: 1.5rem clamp(1.5rem, 3vw, 3rem);
+      padding-block: clamp(2.25rem, 4vw, 3.25rem); border-bottom: 1px solid var(--gray-200); scroll-margin-top: calc(var(--header-h) + 1rem);
+      position: relative;
+    }
+    .pathway::before { content: ""; position: absolute; left: 0; top: -1px; height: 3px; width: 100%; background: var(--navy); transform: scaleX(0); transform-origin: left; transition: transform .45s var(--ease); }
+    .pathway:hover::before { transform: scaleX(1); }
+    .pathway-num { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.25rem, 1.8rem + 1.4vw, 3rem); line-height: .85; color: var(--navy); }
+    .pathway-title { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: clamp(2rem, 1.3rem + 2.2vw, 3.5rem); line-height: .88; color: var(--ink); }
+    .pathway-title span { display: block; }
+    .pathway-line { display: block; margin-top: 1.125rem; font-size: .8125rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--navy); line-height: 1.5; }
+    .pathway-stat { display: flex; align-items: baseline; gap: .75rem; margin-top: 1.75rem; padding-top: 1rem; border-top: 1px solid var(--gray-200); }
+    .pathway-stat strong { font-family: var(--font-display); font-weight: 800; font-size: 2.25rem; line-height: 1; color: var(--navy); }
+    .pathway-stat span { font-size: .6875rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gray-600); }
+    .pathway-body > p { font-size: clamp(1.0625rem, 1rem + .3vw, 1.1875rem); color: var(--charcoal); max-width: 40rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-block: 1.5rem 1.75rem; }
+    .chips li { padding: .4375rem .6875rem; border: 1px solid var(--gray-200); background: var(--white); font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--charcoal); }
+    .pathway .text-link { font-size: 1rem; }
+
+    /* Current opportunities board */
+    .board-section { border-top: 1px solid var(--gray-200); scroll-margin-top: var(--header-h); }
+    .filters { display: flex; flex-wrap: wrap; gap: .5rem; padding-block: 1.25rem; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--gray-200); }
+    .filters-label { align-self: center; margin-right: .75rem; font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gray-600); }
+    .filter-btn { appearance: none; cursor: pointer; padding: .625rem 1rem; border: 1px solid var(--gray-200); border-radius: var(--radius); background: var(--white); font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); transition: background-color .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease); }
+    .filter-btn:hover { border-color: var(--navy); color: var(--navy); }
+    .filter-btn[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: var(--white); }
+    .board-status { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-block: 1rem; font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gray-600); }
+
+    /* Opportunity listing card (used when listings are added) */
+    .opp-card { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 3fr); gap: 1.5rem 2.5rem; align-items: start; padding: clamp(1.75rem, 3vw, 2.5rem) 0; border-bottom: 1px solid var(--gray-200); }
+    .opp-card[hidden] { display: none; }
+    .opp-card-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.25rem; }
+    .opp-card-tags .tag-solid { padding: .375rem .625rem; background: var(--navy); color: var(--white); font-size: .6875rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+    .opp-card-title { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.75rem, 1.3rem + 1.4vw, 2.5rem); line-height: .95; color: var(--ink); }
+    .opp-card-org { margin-top: .625rem; font-weight: 600; color: var(--navy); }
+    .opp-card-desc { margin-top: 1rem; color: var(--gray-600); max-width: 44rem; }
+    .opp-card-meta { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--gray-200); }
+    .opp-card-meta dt { font-size: .6875rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gray-600); }
+    .opp-card-meta dd { margin: .25rem 0 0; font-weight: 600; color: var(--ink); font-size: .9375rem; }
+    .opp-card-action { display: flex; justify-content: flex-end; }
+
+    /* Empty state */
+    .board-empty { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 2rem 4rem; align-items: end; margin-top: 1.5rem; padding: clamp(2rem, 4.5vw, 3.75rem); background: var(--navy-50); border: 1px solid var(--navy-100); position: relative; overflow: hidden; }
+    .board-empty::before { content: ""; position: absolute; inset: 0; background-image: repeating-linear-gradient(135deg, rgba(24, 6, 92, .05) 0 1px, transparent 1px 16px); pointer-events: none; }
+    .board-empty > * { position: relative; }
+    .board-empty[hidden] { display: none; }
+    .board-empty-label { display: inline-flex; align-items: center; gap: .625rem; margin-bottom: 1.5rem; font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--navy); }
+    .board-empty-label::before { content: ""; width: 8px; height: 8px; background: var(--navy); }
+    .board-empty-title { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: clamp(2rem, 1.3rem + 2.6vw, 3.75rem); line-height: .9; color: var(--ink); }
+    .board-empty p { color: var(--charcoal); margin-bottom: 1.75rem; max-width: 30rem; }
+
+    /* Skills grid — 3 col variant on white */
+    .skills--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .lookfor .skill { background: var(--off); }
+    .lookfor .skill:hover { background: var(--navy); }
+    .lookfor-close { margin-top: clamp(2rem, 4vw, 3rem); padding-top: 1.5rem; border-top: 3px solid var(--navy); font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.5rem); line-height: .98; color: var(--navy); max-width: 56rem; }
+
+    /* No connections */
+    .access-close { margin-top: clamp(2.5rem, 5vw, 4rem); padding-top: 2rem; border-top: 1px solid var(--on-dark-rule); font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.75rem, 1.2rem + 2.2vw, 3.25rem); line-height: .95; max-width: 60rem; }
+    .access-close span { color: var(--on-dark-muted); }
+    .access-body { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem clamp(2rem, 5vw, 5rem); max-width: 72rem; }
+    .access-body p { color: var(--on-dark-muted); font-size: clamp(1.0625rem, 1rem + .4vw, 1.3125rem); line-height: 1.55; }
+
+    .ladder-note { margin-top: 1.25rem; font-size: .875rem; color: var(--gray-600); max-width: 44rem; }
+    .levels-off { background: var(--off); border-top: 1px solid var(--gray-200); }
+    .partner-actions { margin-top: 2rem; }
+
+    /* FAQ */
+    .faq { border-top: 1px solid var(--ink); }
+    .faq details { border-bottom: 1px solid var(--gray-200); }
+    .faq summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 3.5rem minmax(0, 1fr) 2rem; gap: 1rem; align-items: center; padding-block: clamp(1.25rem, 2.5vw, 1.75rem); font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.25rem, 1.05rem + .8vw, 1.875rem); line-height: 1; color: var(--ink); transition: color .2s var(--ease); }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary:hover { color: var(--navy); }
+    .faq-num { font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-spacing: .18em; color: var(--gray-600); }
+    .faq-icon { position: relative; width: 18px; height: 18px; justify-self: end; }
+    .faq-icon::before, .faq-icon::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; background: var(--navy); transition: transform .3s var(--ease); }
+    .faq-icon::after { transform: rotate(90deg); }
+    .faq details[open] .faq-icon::after { transform: rotate(0deg); }
+    .faq-answer { padding: 0 2rem 1.75rem 4.5rem; color: var(--charcoal); font-size: clamp(1rem, .95rem + .3vw, 1.1875rem); max-width: 54rem; }
+
+    @media (max-width: 1140px) {
+      .pathway { grid-template-columns: 4rem minmax(0, 1fr); }
+      .pathway-body { grid-column: 2; }
+      .opp-card { grid-template-columns: 1fr; }
+      .opp-card-action { justify-content: flex-start; }
+      .skills--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 820px) {
+      .board-empty { grid-template-columns: 1fr; }
+      .access-body { grid-template-columns: 1fr; }
+      .opp-card-meta { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .pathway { grid-template-columns: 1fr; gap: 1rem; }
+      .pathway-body { grid-column: auto; }
+      .skills--3 { grid-template-columns: 1fr; }
+      .faq summary { grid-template-columns: 2.5rem minmax(0, 1fr) 1.5rem; }
+      .faq-answer { padding-left: 3.5rem; padding-right: 0; }
+      .filters-label { width: 100%; }
+    }
+    .page-hero .page-title { font-size: clamp(2.75rem, 1rem + 5.4vw, 6.5rem); }
+
+    /* ==========================================================
+       INSIGHTS PAGE — additional components
+       ========================================================== */
+    .ins-hero { padding-top: clamp(2rem, 4vw, 3.5rem); padding-bottom: clamp(2.5rem, 5vw, 4rem); }
+    .ins-hero-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 2rem 4rem; align-items: end; }
+    .ins-title { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(2.75rem, 1.2rem + 5vw, 6.25rem); line-height: .88; letter-spacing: -.012em; color: var(--ink); }
+    .ins-title span { display: block; }
+    .ins-title .accent { color: var(--navy); }
+    .masthead { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: clamp(2.5rem, 5vw, 4rem); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+    .masthead li { padding: 1rem clamp(1rem, 2vw, 1.5rem); border-right: 1px solid var(--gray-200); font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.125rem, .95rem + .7vw, 1.625rem); line-height: 1; color: var(--ink); display: flex; gap: .75rem; align-items: baseline; }
+    .masthead li:first-child { padding-left: 0; }
+    .masthead li:last-child { border-right: 0; color: var(--navy); }
+    .masthead li span { font-family: var(--font-body); font-size: .6875rem; font-weight: 600; letter-spacing: .18em; color: var(--gray-600); }
+
+    /* Hub + category nav */
+    .hub { background: var(--off); border-top: 1px solid var(--gray-200); scroll-margin-top: var(--header-h); }
+    .catbar { display: flex; gap: 0; overflow-x: auto; scrollbar-width: thin; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--gray-200); margin-bottom: clamp(2.5rem, 5vw, 4rem); -webkit-overflow-scrolling: touch; }
+    .cat-btn { flex: 0 0 auto; appearance: none; cursor: pointer; background: none; border: 0; border-bottom: 3px solid transparent; padding: 1.125rem clamp(.875rem, 1.4vw, 1.25rem) 1rem; font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap; color: var(--gray-600); transition: color .2s var(--ease), border-color .2s var(--ease); }
+    .cat-btn:first-child { padding-left: 0; }
+    .cat-btn:hover { color: var(--navy); }
+    .cat-btn[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--navy); }
+    .cat-btn:focus-visible { outline-offset: -3px; }
+
+    .hub-label { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-bottom: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--gray-200); font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gray-600); }
+    .hub-label strong { color: var(--ink); font-weight: 700; }
+
+    /* Featured */
+    .featured-wrap { margin-bottom: clamp(4rem, 7vw, 6rem); }
+    .featured-empty { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); border: 1px solid var(--gray-200); background: var(--white); }
+    .featured-empty[hidden] { display: none; }
+    .featured-empty .photo { --ratio: 16 / 10; border: 0; border-right: 1px solid var(--gray-200); }
+    .featured-empty-body { display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; padding: clamp(1.75rem, 3.5vw, 3rem); }
+    .featured-kicker { display: inline-flex; align-items: center; gap: .625rem; font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--navy); }
+    .featured-kicker::before { content: ""; width: 8px; height: 8px; background: var(--navy); }
+    .featured-empty-title { margin-top: 1.5rem; font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: clamp(1.875rem, 1.2rem + 2.4vw, 3.25rem); line-height: .92; color: var(--ink); }
+    .featured-empty p { color: var(--gray-600); }
+    .meta-skeleton { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; padding-top: 1rem; border-top: 1px solid var(--gray-200); font-size: .6875rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gray-400); }
+
+    /* Article cards (used when articles are added) */
+    .ins-card[hidden] { display: none !important; }
+    .ins-card { display: flex; flex-direction: column; gap: 1rem; }
+    .ins-card-thumb { position: relative; display: block; aspect-ratio: 16 / 10; overflow: hidden; background: var(--navy-50); border: 1px solid var(--gray-200); }
+    .ins-card-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+    .ins-card:hover .ins-card-thumb img { transform: scale(1.03); }
+    .ins-card-cat { font-size: .6875rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--navy); }
+    .ins-card-title { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.5rem, 1.2rem + .9vw, 2rem); line-height: .98; color: var(--ink); }
+    .ins-card-title a { text-decoration: none; background-image: linear-gradient(var(--navy), var(--navy)); background-size: 0 2px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .35s var(--ease), color .2s var(--ease); }
+    .ins-card-title a:hover { color: var(--navy); background-size: 100% 2px; }
+    .ins-card-excerpt { color: var(--gray-600); font-size: .9688rem; }
+    .ins-card-meta { display: flex; flex-wrap: wrap; gap: .25rem 1rem; padding-top: .875rem; border-top: 1px solid var(--gray-200); font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gray-600); }
+    .ins-card--featured { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 0; border: 1px solid var(--gray-200); background: var(--white); }
+    .ins-card--featured .ins-card-thumb { border: 0; border-right: 1px solid var(--gray-200); }
+    .ins-card--featured .ins-card-body { display: flex; flex-direction: column; gap: 1.25rem; padding: clamp(1.75rem, 3.5vw, 3rem); }
+    .ins-card--featured .ins-card-title { font-size: clamp(2rem, 1.3rem + 2.4vw, 3.5rem); line-height: .92; }
+
+    .article-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(2.5rem, 4vw, 3.5rem) clamp(1.25rem, 2.5vw, 2.5rem); }
+    .article-grid:empty { display: none; }
+    .latest-head { margin-top: 0; }
+
+    /* Content pillars */
+    .pillar-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(2rem, 5vw, 5rem); border-top: 1px solid var(--ink); }
+    .pillar-row { display: grid; grid-template-columns: 3rem minmax(0, 1fr) 1.5rem; gap: 1rem; align-items: baseline; padding-block: clamp(1.5rem, 2.5vw, 2rem); border-bottom: 1px solid var(--gray-200); text-decoration: none; color: inherit; }
+    .pillar-row-num { font-size: .75rem; font-weight: 600; letter-spacing: .18em; color: var(--gray-600); }
+    .pillar-row h3 { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.5rem, 1.2rem + 1vw, 2.125rem); line-height: .95; margin-bottom: .625rem; color: var(--ink); transition: color .2s var(--ease); }
+    .pillar-row p { color: var(--gray-600); font-size: .9688rem; }
+    .pillar-row-arrow { color: var(--navy); transition: transform .25s var(--ease); }
+    .pillar-row:hover h3 { color: var(--navy); }
+    .pillar-row:hover .pillar-row-arrow { transform: translate(3px, 3px); }
+
+    /* Field notes */
+    .notes { background: var(--navy); color: var(--white); }
+    .notes-layout { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 3rem clamp(3rem, 6vw, 6rem); align-items: start; }
+    .notes-layout .lede { margin-top: 1.75rem; }
+    .notebook { border-top: 1px solid var(--white); }
+    .notebook-head { display: flex; justify-content: space-between; gap: 1rem; padding-block: 1rem; border-bottom: 1px solid var(--on-dark-rule); font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--on-dark-muted); }
+    .notebook-empty { padding: clamp(2rem, 4vw, 3rem) 0; border-bottom: 1px solid var(--on-dark-rule); }
+    .notebook-empty h3 { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: clamp(2rem, 1.3rem + 2.6vw, 3.75rem); line-height: .9; margin-bottom: 1.25rem; }
+    .notebook-empty p { color: var(--on-dark-muted); max-width: 34rem; }
+    .notebook-lines li { display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: 1rem; align-items: center; padding-block: 1.125rem; border-bottom: 1px solid var(--on-dark-rule); font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--on-dark-muted); }
+    .notebook-lines li i { display: block; height: 1px; background: var(--on-dark-rule); }
+    .note-item { display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: 1rem; padding-block: 1.5rem; border-bottom: 1px solid var(--on-dark-rule); }
+    .note-item p { font-size: clamp(1.0625rem, 1rem + .4vw, 1.3125rem); line-height: 1.5; color: var(--white); }
+    .note-item footer { margin-top: .75rem; font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--on-dark-muted); }
+
+    /* Newsroom */
+    .news { border-top: 1px solid var(--ink); }
+    .news-row { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 7fr) minmax(0, 2fr); gap: 1rem 2rem; align-items: baseline; padding-block: 1.5rem; border-bottom: 1px solid var(--gray-200); }
+    .news-row time, .news-date { font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gray-600); }
+    .news-row h3 { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.375rem, 1.1rem + .9vw, 1.875rem); line-height: 1; color: var(--ink); }
+    .news-row p { margin-top: .5rem; color: var(--gray-600); font-size: .9688rem; }
+    .news-row--empty h3 { color: var(--gray-400); }
+    .news-row--empty .news-date { color: var(--gray-400); }
+    .news-topics { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 2rem; }
+
+    /* Approach */
+    .approach { background: var(--off); border-top: 1px solid var(--gray-200); }
+
+    /* Action pathways */
+    .action-section { background: var(--ink); color: var(--white); }
+    .actions3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--on-dark-rule); }
+    .action { min-width: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 2.5rem; padding: clamp(1.75rem, 3vw, 2.5rem) clamp(1.25rem, 2.5vw, 2.5rem) 0; border-right: 1px solid var(--on-dark-rule); }
+    .action:first-child { padding-left: 0; }
+    .action:last-child { border-right: 0; }
+    .action-label { display: block; margin-bottom: 1.5rem; font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--on-dark-muted); }
+    .action h3 { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: clamp(1.75rem, 1rem + 2vw, 3rem); line-height: .9; margin-bottom: 1rem; overflow-wrap: break-word; }
+    .action p { color: var(--on-dark-muted); font-size: clamp(1.0625rem, 1rem + .3vw, 1.1875rem); }
+    .action .text-link { align-self: flex-start; font-size: 1rem; }
+
+    @media (max-width: 1140px) {
+      .article-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .notes-layout { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 820px) {
+      .ins-hero-grid { grid-template-columns: 1fr; }
+      .masthead { grid-template-columns: 1fr; }
+      .masthead li { padding-left: 0; border-right: 0; border-bottom: 1px solid var(--gray-200); }
+      .masthead li:last-child { border-bottom: 0; }
+      .featured-empty, .ins-card--featured { grid-template-columns: 1fr; }
+      .featured-empty .photo, .ins-card--featured .ins-card-thumb { border-right: 0; border-bottom: 1px solid var(--gray-200); }
+      .pillar-list { grid-template-columns: 1fr; }
+      .news-row { grid-template-columns: 1fr; gap: .5rem; }
+      .actions3 { grid-template-columns: 1fr; }
+      .action, .action:first-child { padding: 2rem 0; border-right: 0; border-bottom: 1px solid var(--on-dark-rule); }
+    }
+    @media (max-width: 600px) {
+      .article-grid { grid-template-columns: 1fr; }
+    }
+    .featured-empty .photo { aspect-ratio: auto; height: 100%; min-height: 320px; }
+    .cat-btn { padding-inline: clamp(.75rem, 1.05vw, 1.125rem); letter-spacing: .12em; }
+    .cat-btn:first-child { padding-left: 0; }
+    @media (max-width: 820px) { .featured-empty .photo { aspect-ratio: 16 / 10; height: auto; min-height: 0; } }
+
+    /* ==========================================================
+       GET INVOLVED PAGE — additional components
+       ========================================================== */
+    .header-cta[aria-current="page"] { background: var(--navy-900); border-color: var(--navy-900); box-shadow: inset 0 -3px 0 var(--white); }
+    .nav-cta-mobile a[aria-current="page"] { box-shadow: inset 0 -3px 0 var(--white); }
+    section[id] { scroll-margin-top: var(--header-h); }
+
+    /* Pathway selector */
+    .paths-section { background: var(--off); border-top: 1px solid var(--gray-200); }
+    .pathgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); }
+    .pathcard { position: relative; display: flex; flex-direction: column; gap: 1.5rem; padding: clamp(1.75rem, 3.5vw, 3rem); background: var(--white); min-width: 0; }
+    .pathcard::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--navy); transform: scaleX(0); transform-origin: left; transition: transform .45s var(--ease); }
+    .pathcard:hover::before, .pathcard:focus-within::before { transform: scaleX(1); }
+    .pathcard-top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+    .pathcard-label { font-size: .75rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--navy); }
+    .pathcard-num { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.5rem, 2rem + 1.6vw, 3.5rem); line-height: .8; color: var(--navy-100); }
+    .pathcard h3 { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: clamp(2.5rem, 1.6rem + 3vw, 4.5rem); line-height: .86; color: var(--ink); }
+    .pathcard h3 span { display: block; }
+    .pathcard > p { color: var(--charcoal); font-size: clamp(1rem, .95rem + .3vw, 1.125rem); max-width: 34rem; }
+    .pathcard .chips { margin-block: 0; }
+    .pathcard-actions { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.75rem; padding-top: 1rem; }
+    .pathcard-actions .text-link { font-size: .9375rem; border-bottom-width: 1px; }
+    .pathcard--primary { background: var(--navy); color: var(--white); }
+    .pathcard--primary .pathcard-label { color: var(--on-dark-muted); }
+    .pathcard--primary .pathcard-num { color: rgba(255,255,255,.18); }
+    .pathcard--primary h3 { color: var(--white); }
+    .pathcard--primary > p { color: var(--on-dark); }
+    .pathcard--primary .chips li { background: transparent; border-color: var(--on-dark-rule); color: var(--white); }
+    .pathcard--primary::before { background: var(--white); }
+
+    /* Core statement */
+    .core { background: var(--navy); color: var(--white); }
+    .core-lines p { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: clamp(2.25rem, 1rem + 5vw, 6.5rem); line-height: .9; letter-spacing: -.012em; color: var(--on-dark-muted); }
+    .core-lines p:last-child { color: var(--white); }
+    .core-copy { margin-top: clamp(2.5rem, 5vw, 4rem); padding-top: 2rem; border-top: 1px solid var(--on-dark-rule); max-width: 50rem; font-size: clamp(1.125rem, 1rem + .5vw, 1.375rem); line-height: 1.55; color: var(--on-dark-muted); }
+
+    /* Form sections */
+    .form-section--off { background: var(--off); border-top: 1px solid var(--gray-200); }
+    .form-section--white { background: var(--white); border-top: 1px solid var(--gray-200); }
+    .form-layout { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 3rem clamp(3rem, 6vw, 6rem); align-items: start; }
+    .form-intro { position: sticky; top: calc(var(--header-h) + 2.5rem); }
+    .form-intro .h2 { margin-bottom: 1.75rem; font-size: clamp(2.25rem, 1.3rem + 3vw, 4.25rem); }
+    .form-intro > p:not(.eyebrow) { color: var(--charcoal); font-size: clamp(1.0625rem, 1rem + .3vw, 1.1875rem); max-width: 34rem; }
+    .form-intro .chips { margin-block: 1.75rem; }
+    .intro-line { margin-top: 2rem; padding-top: 1.25rem; border-top: 3px solid var(--navy); font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.375rem, 1.1rem + 1vw, 2rem); line-height: 1; color: var(--navy); }
+    .svc-mini { margin-block: 1.75rem; border-top: 1px solid var(--ink); }
+    .svc-mini li { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); gap: .75rem; align-items: baseline; padding-block: .875rem; border-bottom: 1px solid var(--gray-200); font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.125rem, 1rem + .5vw, 1.375rem); line-height: 1; }
+    .svc-mini li span { font-family: var(--font-body); font-size: .6875rem; font-weight: 600; letter-spacing: .16em; color: var(--navy); }
+    .stat-inline { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.75rem; }
+    .stat-inline strong { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.75rem, 2rem + 2vw, 3.75rem); line-height: .9; color: var(--navy); }
+    .stat-inline span { font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gray-600); }
+
+    /* Forms */
+    .form { border-top: 3px solid var(--navy); padding-top: clamp(1.5rem, 3vw, 2.25rem); }
+    .form-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .5rem 1rem; margin-bottom: 2rem; }
+    .form-title { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); line-height: 1; color: var(--ink); }
+    .form-req-note { font-size: .8125rem; color: var(--gray-600); }
+    .req { color: var(--navy); font-weight: 700; }
+    .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 1.25rem; }
+    .field { display: flex; flex-direction: column; gap: .5rem; min-width: 0; }
+    .field--full { grid-column: 1 / -1; }
+    .field label, .group legend { font-size: .75rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); }
+    .field-hint { font-size: .8125rem; color: var(--gray-600); }
+    .form input[type="text"], .form input[type="email"], .form input[type="tel"], .form select, .form textarea {
+      width: 100%; min-height: 50px; padding: .8125rem 1rem;
+      font: inherit; font-size: 1rem; color: var(--ink);
+      background: var(--white); border: 1px solid #77748A; border-radius: var(--radius);
+      transition: border-color .2s var(--ease), box-shadow .2s var(--ease);
+    }
+    .form textarea { min-height: 130px; resize: vertical; line-height: 1.55; }
+    .form select { appearance: none; padding-right: 2.75rem; background-image: linear-gradient(45deg, transparent 50%, var(--navy) 50%), linear-gradient(135deg, var(--navy) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%; background-size: 6px 6px; background-repeat: no-repeat; }
+    .form input:focus-visible, .form select:focus-visible, .form textarea:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; border-color: var(--navy); }
+    .form input:user-invalid, .form select:user-invalid, .form textarea:user-invalid { border-color: #8B1E3F; border-width: 2px; }
+    .group { grid-column: 1 / -1; margin: 0; padding: 0; border: 0; min-width: 0; }
+    .group legend { padding: 0; margin-bottom: .75rem; }
+    .group .field-hint { display: block; margin: -.25rem 0 .75rem; }
+    .checks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
+    .checks--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .check { display: flex; align-items: center; gap: .75rem; min-height: 50px; padding: .625rem .875rem; background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius); cursor: pointer; font-size: .9375rem; font-weight: 500; color: var(--ink); transition: border-color .2s var(--ease), background-color .2s var(--ease); }
+    .check:hover { border-color: var(--navy); }
+    .check input { flex: 0 0 auto; width: 20px; height: 20px; margin: 0; accent-color: var(--navy); cursor: pointer; }
+    .check:has(input:checked) { border-color: var(--navy); background: var(--navy-50); box-shadow: inset 3px 0 0 var(--navy); }
+    .check:has(input:focus-visible) { outline: 2px solid var(--navy); outline-offset: 2px; }
+    .form-submit { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; padding-top: .75rem; border-top: 1px solid var(--gray-200); margin-top: .5rem; }
+    .form-submit .btn { cursor: pointer; font-family: var(--font-display); }
+    .form-submit-note { font-size: .8125rem; color: var(--gray-600); }
+    .form-status { grid-column: 1 / -1; padding: 1rem 1.25rem; border-left: 4px solid var(--navy); background: var(--navy-50); font-weight: 600; color: var(--ink); }
+    .form-status[hidden] { display: none; }
+    .form-status:focus { outline: 2px solid var(--navy); outline-offset: 2px; }
+    .form-status--error { border-left-color: #8B1E3F; background: #FBF1F3; }
+    .form-submit .btn[disabled] { opacity: .7; cursor: progress; }
+
+    /* Closing */
+    .close-links { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: clamp(3rem, 5vw, 4rem); border-top: 1px solid var(--on-dark-rule); }
+    .close-links a { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.5rem clamp(1rem, 2vw, 1.75rem) 1.5rem 0; margin-right: clamp(1rem, 2vw, 1.75rem); border-bottom: 1px solid transparent; text-decoration: none; color: var(--white); font-family: var(--font-display); font-weight: 600; font-size: clamp(1.125rem, 1rem + .5vw, 1.375rem); letter-spacing: .08em; text-transform: uppercase; transition: border-color .25s var(--ease), color .25s var(--ease); }
+    .close-links a span { color: var(--on-dark-muted); transition: transform .25s var(--ease); }
+    .close-links a:hover { border-bottom-color: var(--white); }
+    .close-links a:hover span { transform: translateY(-3px); }
+
+    @media (max-width: 1140px) {
+      .form-layout { grid-template-columns: 1fr; }
+      .form-intro { position: static; }
+      .close-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 820px) {
+      .pathgrid { grid-template-columns: 1fr; }
+      .checks--3 { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .form-grid, .checks, .checks--3 { grid-template-columns: 1fr; }
+      .form-submit .btn { width: 100%; }
+      .close-links { grid-template-columns: 1fr; }
+      .close-links a { margin-right: 0; padding-right: 0; border-bottom-color: var(--on-dark-rule); }
+      .pathcard-actions .btn { width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ======================================================
+       HEADER / NAVIGATION
+       ====================================================== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html" aria-label="Young Leaders in Politics — Home">
+        <!--
+          OFFICIAL LOGO: When images/ylip-logo.png is ready, delete the two
+          <span> elements below and replace them with:
+          <img class="brand-logo" src="images/ylip-logo.png" alt="Young Leaders in Politics">
+        -->
+        <span class="brand-mark" aria-hidden="true">YLIP</span>
+        <span class="brand-word" aria-hidden="true">
+          <span>Young</span>
+          <span>Leaders</span>
+          <span>In</span>
+          <span>Politics</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="campaigns.html">Campaigns</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a href="opportunities.html">Opportunities</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li class="nav-cta-mobile"><a class="btn btn-primary" href="get-involved.html" aria-current="page">Get Involved <span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-primary header-cta" href="get-involved.html" aria-current="page">Get Involved</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ======================================================
+         HERO
+         ====================================================== -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <div class="hero-meta">
+          <span>Young Leaders in Politics</span>
+          <span>Join · Work With · Share · Connect</span>
+          <span class="hero-loc">Based in Tennessee</span>
+        </div>
+
+        <div class="camp-hero-grid">
+          <div class="camp-hero-copy">
+            <p class="eyebrow">Get Involved</p>
+            <h1 class="page-title" id="page-title">
+              <span>There's more than</span>
+              <span class="accent">one way in.</span>
+            </h1>
+            <p class="hero-lede">Whether you're ready to enter politics, need support for a campaign, have an opportunity for a young leader, or simply want to connect, Young Leaders in Politics gives you a place to start.</p>
+            <div class="camp-hero-actions">
+              <a class="btn btn-primary" href="#paths">Find Your Path <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+
+          <figure class="photo camp-hero-photo">
+            <!-- Replace with real YLIP Get Involved photo:
+                 <img src="images/get-involved-hero.jpg" alt="YLIP members at a political event"> -->
+            <span class="photo-corner" aria-hidden="true"></span>
+            <span class="photo-label" aria-hidden="true">
+              Get Involved Photograph
+              <code>images/get-involved-hero.jpg</code>
+            </span>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         PATHWAY SELECTOR
+         ====================================================== -->
+    <section class="section paths-section" id="paths" aria-labelledby="paths-title">
+      <div class="container">
+        <div class="split-head reveal">
+          <div>
+            <p class="eyebrow">Choose Your Path</p>
+            <h2 class="h2" id="paths-title"><span>How do you want</span> <span class="accent">to get involved?</span></h2>
+          </div>
+          <p class="lede">Four ways to connect with YLIP. Choose the one that fits — each leads to its own form below.</p>
+        </div>
+
+        <div class="pathgrid reveal">
+          <article class="pathcard pathcard--primary on-dark" aria-labelledby="path1-title">
+            <div class="pathcard-top"><span class="pathcard-label">For Young Leaders</span><span class="pathcard-num" aria-hidden="true">01</span></div>
+            <h3 id="path1-title">Join YLIP.</h3>
+            <p>Turn your interest in politics into real experience through campaigns, government, political events, research, field operations, advocacy, and civic leadership.</p>
+            <ul class="chips" aria-label="Potential experiences">
+              <li>Campaigns</li><li>Government</li><li>Internships</li><li>Legislative experiences</li><li>Political research</li><li>Communications</li><li>Field operations</li><li>Political events</li><li>Advocacy</li><li>Civic engagement</li>
+            </ul>
+            <div class="pathcard-actions">
+              <a class="btn btn-light" href="#join">I Want to Join <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="pathcard" aria-labelledby="path2-title">
+            <div class="pathcard-top"><span class="pathcard-label">For Campaigns</span><span class="pathcard-num" aria-hidden="true">02</span></div>
+            <h3 id="path2-title"><span>Put YLIP</span> <span>to work.</span></h3>
+            <p>Expand your campaign's capacity with support across strategy, creative and digital, grassroots outreach, data and research, and event management.</p>
+            <ul class="chips" aria-label="Campaign capabilities">
+              <li>Campaign Management &amp; Strategy</li><li>Creative &amp; Digital</li><li>Grassroots Outreach</li><li>Data &amp; Research</li><li>Event Management</li>
+            </ul>
+            <div class="pathcard-actions">
+              <a class="btn btn-primary" href="#campaign">Work With YLIP <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="text-link" href="campaigns.html">Explore Campaign Services <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="pathcard" aria-labelledby="path3-title">
+            <div class="pathcard-top"><span class="pathcard-label">For Offices &amp; Organizations</span><span class="pathcard-num" aria-hidden="true">03</span></div>
+            <h3 id="path3-title">Open a door.</h3>
+            <p>Connect internships, campaign roles, government experiences, events, civic initiatives, and other political opportunities with motivated young people ready to contribute.</p>
+            <ul class="chips" aria-label="Potential partners">
+              <li>Government offices</li><li>Elected officials</li><li>Political campaigns</li><li>Political organizations</li><li>Civic organizations</li><li>Community leaders</li><li>Political professionals</li>
+            </ul>
+            <div class="pathcard-actions">
+              <a class="btn btn-primary" href="#partner">Share an Opportunity <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="text-link" href="opportunities.html">View Opportunities <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="pathcard" aria-labelledby="path4-title">
+            <div class="pathcard-top"><span class="pathcard-label">General Inquiries</span><span class="pathcard-num" aria-hidden="true">04</span></div>
+            <h3 id="path4-title">Let's talk.</h3>
+            <p>Have another idea, question, partnership, event, media inquiry, or reason to connect? Reach out to Young Leaders in Politics.</p>
+            <div class="pathcard-actions">
+              <a class="btn btn-primary" href="#contact">Contact YLIP <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         CORE POSITIONING
+         ====================================================== -->
+    <section class="section core on-dark" aria-labelledby="core-title">
+      <div class="container">
+        <h2 id="core-title" class="visually-hidden">The YLIP model</h2>
+        <div class="core-lines reveal">
+          <p>Campaigns need talent.</p>
+          <p>Young people need opportunity.</p>
+          <p>YLIP connects the two.</p>
+        </div>
+        <p class="core-copy reveal">Young Leaders in Politics creates value on both sides of the political process — helping campaigns and organizations execute meaningful work while giving emerging leaders the opportunity to gain real experience.</p>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         FOR YOUNG LEADERS + FORM
+         ====================================================== -->
+    <section class="section form-section--white" id="join" aria-labelledby="join-title">
+      <div class="container form-layout">
+        <div class="form-intro reveal">
+          <p class="eyebrow">For Young Leaders</p>
+          <h2 class="h2" id="join-title"><span>Don't wait to</span> <span class="accent">enter politics.</span></h2>
+          <p>You don't need an established political network to start. You need genuine interest, reliability, professionalism, and a willingness to contribute.</p>
+          <ul class="chips" aria-label="Experience areas">
+            <li>Campaigns</li><li>Government</li><li>Legislative</li><li>Internships</li><li>Research</li><li>Communications</li><li>Data</li><li>Field Operations</li><li>Events</li><li>Advocacy</li><li>Civic Engagement</li>
+          </ul>
+          <p class="intro-line">Access opens the door. What you do once you're inside is up to you.</p>
+        </div>
+
+          <!--
+          FORM CONNECTED TO FORMSPREE (young-leader-form)
+          Submissions are sent with JavaScript (fetch) to the action URL below,
+          so visitors stay on this page. Status messages are set in the
+          FORM SUBMISSION script near the bottom of this file.
+          -->
+          <form class="form reveal" id="young-leader-form" action="https://formspree.io/f/mljgjpzz" method="POST" aria-labelledby="young-leader-form-title">
+            <input type="hidden" name="YLIP Form" value="Young Leader Interest">
+            <!-- Spam honeypot (Formspree): hidden from people and keyboard navigation; leave empty -->
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+            <div class="form-head">
+              <h3 class="form-title" id="young-leader-form-title">Young Leader Interest Form</h3>
+              <p class="form-req-note"><span class="req" aria-hidden="true">*</span> Required field</p>
+            </div>
+            <div class="form-grid">
+            <div class="field">
+              <label for="yl-full-name">Full Name <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+              <input type="text" id="yl-full-name" name="full_name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="yl-email">Email <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+              <input type="email" id="yl-email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="yl-phone">Phone Number</label>
+              <input type="tel" id="yl-phone" name="phone" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="yl-school">School</label>
+              <input type="text" id="yl-school" name="school" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="yl-city-county">City / County</label>
+              <input type="text" id="yl-city-county" name="city_county" autocomplete="address-level2">
+            </div>
+            <div class="field">
+              <label for="yl-age-grade">Age or Grade Level</label>
+              <input type="text" id="yl-age-grade" name="age_grade">
+            </div>
+            <fieldset class="group" id="yl-interests" data-required-group="Please select at least one option.">
+              <legend>Areas of Interest <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></legend>
+              <span class="field-hint">Select all that apply.</span>
+              <div class="checks">
+                <label class="check" for="yl-interests-campaigns"><input type="checkbox" id="yl-interests-campaigns" name="interests[]" value="campaigns"> Campaigns</label>
+                <label class="check" for="yl-interests-government-and-legislative"><input type="checkbox" id="yl-interests-government-and-legislative" name="interests[]" value="government-and-legislative"> Government &amp; Legislative</label>
+                <label class="check" for="yl-interests-political-research"><input type="checkbox" id="yl-interests-political-research" name="interests[]" value="political-research"> Political Research</label>
+                <label class="check" for="yl-interests-communications-and-design"><input type="checkbox" id="yl-interests-communications-and-design" name="interests[]" value="communications-and-design"> Communications &amp; Design</label>
+                <label class="check" for="yl-interests-data-and-analysis"><input type="checkbox" id="yl-interests-data-and-analysis" name="interests[]" value="data-and-analysis"> Data &amp; Analysis</label>
+                <label class="check" for="yl-interests-field-operations"><input type="checkbox" id="yl-interests-field-operations" name="interests[]" value="field-operations"> Field Operations</label>
+                <label class="check" for="yl-interests-events-and-networking"><input type="checkbox" id="yl-interests-events-and-networking" name="interests[]" value="events-and-networking"> Events &amp; Networking</label>
+                <label class="check" for="yl-interests-advocacy"><input type="checkbox" id="yl-interests-advocacy" name="interests[]" value="advocacy"> Advocacy</label>
+                <label class="check" for="yl-interests-civic-engagement"><input type="checkbox" id="yl-interests-civic-engagement" name="interests[]" value="civic-engagement"> Civic Engagement</label>
+                <label class="check" for="yl-interests-not-sure-yet"><input type="checkbox" id="yl-interests-not-sure-yet" name="interests[]" value="not-sure-yet"> Not Sure Yet</label>
+              </div>
+            </fieldset>
+            <fieldset class="group" id="yl-experience-level">
+              <legend>Experience Level</legend>
+              <div class="checks checks--3">
+                <label class="check" for="yl-experience-level-new-to-politics"><input type="radio" id="yl-experience-level-new-to-politics" name="experience_level" value="new-to-politics"> New to politics</label>
+                <label class="check" for="yl-experience-level-some-political-civic-experience"><input type="radio" id="yl-experience-level-some-political-civic-experience" name="experience_level" value="some-political-civic-experience"> Some political/civic experience</label>
+                <label class="check" for="yl-experience-level-significant-political-civic-experience"><input type="radio" id="yl-experience-level-significant-political-civic-experience" name="experience_level" value="significant-political-civic-experience"> Significant political/civic experience</label>
+              </div>
+            </fieldset>
+            <div class="field field--full">
+              <label for="yl-why-interested">Why are you interested in YLIP? <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+              <textarea id="yl-why-interested" name="why_interested" rows="5" required></textarea>
+            </div>
+            <div class="field field--full">
+              <label for="yl-opportunity-type">What type of opportunity are you looking for?</label>
+              <textarea id="yl-opportunity-type" name="opportunity_type" rows="4"></textarea>
+            </div>
+            <div class="field field--full">
+              <label for="yl-availability">Availability</label>
+              <textarea id="yl-availability" name="availability" rows="3"></textarea>
+            </div>
+            <div class="form-status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">Submit Interest <span class="arrow" aria-hidden="true">→</span></button>
+            </div>
+            </div>
+          </form>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         FOR CAMPAIGNS + FORM
+         ====================================================== -->
+    <section class="section form-section--off" id="campaign" aria-labelledby="campaign-title">
+      <div class="container form-layout">
+        <div class="form-intro reveal">
+          <p class="eyebrow">For Campaigns</p>
+          <h2 class="h2" id="campaign-title"><span>Need more capacity?</span> <span class="accent">Let's build it.</span></h2>
+          <p>YLIP works with candidates and campaigns across strategy, communications, field operations, research, data, and events.</p>
+          <ol class="svc-mini">
+            <li><span>01</span>Campaign Management &amp; Strategy</li>
+            <li><span>02</span>Creative &amp; Digital</li>
+            <li><span>03</span>Grassroots Outreach</li>
+            <li><span>04</span>Data &amp; Research</li>
+            <li><span>05</span>Event Management</li>
+          </ol>
+          <div class="stat-inline"><strong>20,000+</strong><span>Doors knocked</span></div>
+          <a class="text-link" href="campaigns.html">Explore All Campaign Services <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+
+          <!--
+          FORM CONNECTED TO FORMSPREE (campaign-form)
+          Submissions are sent with JavaScript (fetch) to the action URL below,
+          so visitors stay on this page. Status messages are set in the
+          FORM SUBMISSION script near the bottom of this file.
+          -->
+          <form class="form reveal" id="campaign-form" action="https://formspree.io/f/myekenov" method="POST" aria-labelledby="campaign-form-title">
+            <input type="hidden" name="YLIP Form" value="Campaign Inquiry">
+            <!-- Spam honeypot (Formspree): hidden from people and keyboard navigation; leave empty -->
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+            <div class="form-head">
+              <h3 class="form-title" id="campaign-form-title">Campaign Inquiry</h3>
+              <p class="form-req-note"><span class="req" aria-hidden="true">*</span> Required field</p>
+            </div>
+            <div class="form-grid">
+            <div class="field">
+              <label for="cf-contact-name">Your Name <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+              <input type="text" id="cf-contact-name" name="contact_name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="cf-campaign-organization">Campaign / Organization <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+              <input type="text" id="cf-campaign-organization" name="campaign_organization" autocomplete="organization" required>
+            </div>
+            <div class="field">
+              <label for="cf-email">Email <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+              <input type="email" id="cf-email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="cf-phone">Phone Number</label>
+              <input type="tel" id="cf-phone" name="phone" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="cf-office-race">Office / Race</label>
+              <input type="text" id="cf-office-race" name="office_race">
+            </div>
+            <div class="field">
+              <label for="cf-campaign-level">Campaign Level</label>
+              <select id="cf-campaign-level" name="campaign_level">
+                <option value="">Select one</option>
+                <option value="local">Local</option>
+                <option value="state">State</option>
+                <option value="federal">Federal</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <fieldset class="group" id="cf-campaign-needs" data-required-group="Please select at least one option.">
+              <legend>What does your campaign need? <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></legend>
+              <span class="field-hint">Select all that apply.</span>
+              <div class="checks">
+                <label class="check" for="cf-campaign-needs-campaign-management-and-strategy"><input type="checkbox" id="cf-campaign-needs-campaign-management-and-strategy" name="campaign_needs[]" value="campaign-management-and-strategy"> Campaign Management &amp; Strategy</label>
+                <label class="check" for="cf-campaign-needs-creative-and-digital"><input type="checkbox" id="cf-campaign-needs-creative-and-digital" name="campaign_needs[]" value="creative-and-digital"> Creative &amp; Digital</label>
+                <label class="check" for="cf-campaign-needs-grassroots-outreach"><input type="checkbox" id="cf-campaign-needs-grassroots-outreach" name="campaign_needs[]" value="grassroots-outreach"> Grassroots Outreach</label>
+                <label class="check" for="cf-campaign-needs-data-and-research"><input type="checkbox" id="cf-campaign-needs-data-and-research" name="campaign_needs[]" value="data-and-research"> Data &amp; Research</label>
+                <label class="check" for="cf-campaign-needs-event-management"><input type="checkbox" id="cf-campaign-needs-event-management" name="campaign_needs[]" value="event-management"> Event Management</label>
+                <label class="check" for="cf-campaign-needs-volunteer-recruitment"><input type="checkbox" id="cf-campaign-needs-volunteer-recruitment" name="campaign_needs[]" value="volunteer-recruitment"> Volunteer Recruitment</label>
+                <label class="check" for="cf-campaign-needs-other"><input type="checkbox" id="cf-campaign-needs-other" name="campaign_needs[]" value="other"> Other</label>
+              </div>
+            </fieldset>
+            <div class="field field--full">
+              <label for="cf-needs-details">Tell us about your campaign's needs <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+              <textarea id="cf-needs-details" name="needs_details" rows="5" required></textarea>
+            </div>
+            <div class="field field--full">
+              <label for="cf-timeline">Timeline</label>
+              <textarea id="cf-timeline" name="timeline" rows="3"></textarea>
+            </div>
+            <div class="form-status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">Start a Conversation <span class="arrow" aria-hidden="true">→</span></button>
+            </div>
+            </div>
+          </form>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         FOR OFFICES & ORGANIZATIONS + FORM
+         ====================================================== -->
+    <section class="section form-section--white" id="partner" aria-labelledby="partner-title">
+      <div class="container form-layout">
+        <div class="form-intro reveal">
+          <p class="eyebrow">For Offices &amp; Organizations</p>
+          <h2 class="h2" id="partner-title"><span>Have an opportunity?</span> <span class="accent">We know people ready to work.</span></h2>
+          <p>YLIP works to connect meaningful political and civic opportunities with motivated young people.</p>
+          <ul class="chips" aria-label="Opportunity types">
+            <li>Campaign roles</li><li>Political internships</li><li>Government internships</li><li>Legislative opportunities</li><li>Political research</li><li>Communications work</li><li>Field operations</li><li>Political events</li><li>Civic initiatives</li><li>Volunteer opportunities</li>
+          </ul>
+          <p class="note">Sharing an opportunity starts a conversation. It does not automatically guarantee a placement or a match.</p>
+        </div>
+
+          <!--
+          FORM CONNECTED TO FORMSPREE (partner-form)
+          Submissions are sent with JavaScript (fetch) to the action URL below,
+          so visitors stay on this page. Status messages are set in the
+          FORM SUBMISSION script near the bottom of this file.
+          -->
+          <form class="form reveal" id="partner-form" action="https://formspree.io/f/mzedejoq" method="POST" aria-labelledby="partner-form-title">
+            <input type="hidden" name="YLIP Form" value="Opportunity Submission">
+            <!-- Spam honeypot (Formspree): hidden from people and keyboard navigation; leave empty -->
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+            <div class="form-head">
+              <h3 class="form-title" id="partner-form-title">Share an Opportunity</h3>
+              <p class="form-req-note"><span class="req" aria-hidden="true">*</span> Required field</p>
+            </div>
+            <div class="form-grid">
+            <div class="field">
+              <label for="pf-contact-name">Your Name <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+              <input type="text" id="pf-contact-name" name="contact_name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="pf-organization">Organization / Office <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+              <input type="text" id="pf-organization" name="organization" autocomplete="organization" required>
+            </div>
+            <div class="field">
+              <label for="pf-email">Email <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+              <input type="email" id="pf-email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="pf-phone">Phone Number</label>
+              <input type="tel" id="pf-phone" name="phone" autocomplete="tel">
+            </div>
+            <div class="field field--full">
+              <label for="pf-organization-type">Type of Organization</label>
+              <select id="pf-organization-type" name="organization_type">
+                <option value="">Select one</option>
+                <option value="campaign">Campaign</option>
+                <option value="government-office">Government Office</option>
+                <option value="elected-official-office">Elected Official Office</option>
+                <option value="political-organization">Political Organization</option>
+                <option value="civic-organization">Civic Organization</option>
+                <option value="community-organization">Community Organization</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <fieldset class="group" id="pf-opportunity-type" data-required-group="Please select at least one option.">
+              <legend>Opportunity Type <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></legend>
+              <span class="field-hint">Select all that apply.</span>
+              <div class="checks">
+                <label class="check" for="pf-opportunity-type-internship"><input type="checkbox" id="pf-opportunity-type-internship" name="opportunity_type[]" value="internship"> Internship</label>
+                <label class="check" for="pf-opportunity-type-campaign"><input type="checkbox" id="pf-opportunity-type-campaign" name="opportunity_type[]" value="campaign"> Campaign</label>
+                <label class="check" for="pf-opportunity-type-government"><input type="checkbox" id="pf-opportunity-type-government" name="opportunity_type[]" value="government"> Government</label>
+                <label class="check" for="pf-opportunity-type-legislative"><input type="checkbox" id="pf-opportunity-type-legislative" name="opportunity_type[]" value="legislative"> Legislative</label>
+                <label class="check" for="pf-opportunity-type-field"><input type="checkbox" id="pf-opportunity-type-field" name="opportunity_type[]" value="field"> Field</label>
+                <label class="check" for="pf-opportunity-type-research"><input type="checkbox" id="pf-opportunity-type-research" name="opportunity_type[]" value="research"> Research</label>
+                <label class="check" for="pf-opportunity-type-communications"><input type="checkbox" id="pf-opportunity-type-communications" name="opportunity_type[]" value="communications"> Communications</label>
+                <label class="check" for="pf-opportunity-type-event"><input type="checkbox" id="pf-opportunity-type-event" name="opportunity_type[]" value="event"> Event</label>
+                <label class="check" for="pf-opportunity-type-civic"><input type="checkbox" id="pf-opportunity-type-civic" name="opportunity_type[]" value="civic"> Civic</label>
+                <label class="check" for="pf-opportunity-type-other"><input type="checkbox" id="pf-opportunity-type-other" name="opportunity_type[]" value="other"> Other</label>
+              </div>
+            </fieldset>
+            <div class="field field--full">
+              <label for="pf-opportunity-title">Opportunity Title</label>
+              <input type="text" id="pf-opportunity-title" name="opportunity_title">
+            </div>
+            <div class="field">
+              <label for="pf-location">Location</label>
+              <input type="text" id="pf-location" name="location">
+            </div>
+            <div class="field">
+              <label for="pf-time-commitment">Time Commitment</label>
+              <input type="text" id="pf-time-commitment" name="time_commitment">
+            </div>
+            <div class="field field--full">
+              <label for="pf-deadline">Deadline</label>
+              <input type="text" id="pf-deadline" name="deadline">
+            </div>
+            <div class="field field--full">
+              <label for="pf-opportunity-description">Describe the opportunity <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+              <textarea id="pf-opportunity-description" name="opportunity_description" rows="5" required></textarea>
+            </div>
+            <div class="field field--full">
+              <label for="pf-participant-profile">What are you looking for in a participant?</label>
+              <textarea id="pf-participant-profile" name="participant_profile" rows="4"></textarea>
+            </div>
+            <div class="form-status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">Share Opportunity <span class="arrow" aria-hidden="true">→</span></button>
+            </div>
+            </div>
+          </form>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         GENERAL CONTACT + FORM
+         ====================================================== -->
+    <section class="section form-section--off" id="contact" aria-labelledby="contact-title">
+      <div class="container form-layout">
+        <div class="form-intro reveal">
+          <p class="eyebrow">General Inquiries</p>
+          <h2 class="h2" id="contact-title"><span>Let's</span> <span class="accent">connect.</span></h2>
+          <p>For partnerships, events, media, organizational questions, or anything that doesn't fit above, send YLIP a general inquiry.</p>
+        </div>
+
+          <!--
+          FORM CONNECTED TO FORMSPREE (general-contact-form)
+          Submissions are sent with JavaScript (fetch) to the action URL below,
+          so visitors stay on this page. Status messages are set in the
+          FORM SUBMISSION script near the bottom of this file.
+          -->
+          <form class="form reveal" id="general-contact-form" action="https://formspree.io/f/meaearnb" method="POST" aria-labelledby="general-contact-form-title">
+            <input type="hidden" name="YLIP Form" value="General Contact">
+            <!-- Spam honeypot (Formspree): hidden from people and keyboard navigation; leave empty -->
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+            <div class="form-head">
+              <h3 class="form-title" id="general-contact-form-title">General Inquiry</h3>
+              <p class="form-req-note"><span class="req" aria-hidden="true">*</span> Required field</p>
+            </div>
+            <div class="form-grid">
+            <div class="field">
+              <label for="gc-name">Name <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+              <input type="text" id="gc-name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="gc-email">Email <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+              <input type="email" id="gc-email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="gc-organization">Organization</label>
+              <input type="text" id="gc-organization" name="organization" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="gc-subject">Subject <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+              <input type="text" id="gc-subject" name="subject" required>
+            </div>
+            <div class="field field--full">
+              <label for="gc-message">Message <span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+              <textarea id="gc-message" name="message" rows="6" required></textarea>
+            </div>
+            <div class="form-status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">Contact YLIP <span class="arrow" aria-hidden="true">→</span></button>
+            </div>
+            </div>
+          </form>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         WHAT HAPPENS NEXT
+         ====================================================== -->
+    <section class="section form-section--white" aria-labelledby="next-title">
+      <div class="container">
+        <div class="split-head reveal">
+          <div>
+            <p class="eyebrow">After You Reach Out</p>
+            <h2 class="h2" id="next-title"><span>The conversation</span> <span class="accent">starts here.</span></h2>
+          </div>
+        </div>
+
+        <ol class="steps reveal">
+          <li class="step">
+            <span class="step-num">01</span>
+            <h3 class="h3">Reach Out</h3>
+            <p>Choose the path that best fits why you're contacting YLIP.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">02</span>
+            <h3 class="h3">Connect</h3>
+            <p>YLIP can learn more about your interests, needs, opportunity, campaign, or organization.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">03</span>
+            <h3 class="h3">Find the Fit</h3>
+            <p>When appropriate, YLIP can help identify the best next step based on available opportunities, organizational needs, and fit.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">04</span>
+            <h3 class="h3">Get Involved</h3>
+            <p>From there, the goal is simple: turn the connection into meaningful political or civic participation.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         WHO YLIP IS LOOKING FOR
+         ====================================================== -->
+    <section class="section skills-section" aria-labelledby="who-title">
+      <div class="container">
+        <div class="split-head reveal">
+          <div>
+            <p class="eyebrow">Who YLIP Is Looking For</p>
+            <h2 class="h2" id="who-title"><span>Show up.</span> <span>Contribute.</span> <span class="accent">Grow.</span></h2>
+          </div>
+          <p class="lede">YLIP takes participation seriously. These are the qualities that matter most.</p>
+        </div>
+
+        <ul class="skills skills--3 reveal">
+          <li class="skill"><span class="skill-index">01</span><h3>Reliability</h3><p>If you make a commitment, follow through.</p></li>
+          <li class="skill"><span class="skill-index">02</span><h3>Initiative</h3><p>Look for ways to contribute.</p></li>
+          <li class="skill"><span class="skill-index">03</span><h3>Professionalism</h3><p>Treat campaigns, officials, organizations, voters, and teammates seriously.</p></li>
+          <li class="skill"><span class="skill-index">04</span><h3>Curiosity</h3><p>Be willing to learn how politics actually works.</p></li>
+          <li class="skill"><span class="skill-index">05</span><h3>Work Ethic</h3><p>Be willing to do the work — including the work that isn't glamorous.</p></li>
+          <li class="skill"><span class="skill-index">06</span><h3>Genuine Interest</h3><p>Join because you want to participate and learn, not simply collect another résumé line.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         PROOF
+         METRICS: keep consistent with the verified figures on index.html.
+         ====================================================== -->
+    <section class="section metrics proof-band on-dark" aria-labelledby="proof-title">
+      <div class="container">
+        <div class="split-head reveal">
+          <div>
+            <p class="eyebrow">The Record</p>
+            <h2 class="h2" id="proof-title"><span>Ready to do</span> <span class="accent">real work?</span></h2>
+          </div>
+          <p class="serif-quote">YLIP is built around participation — in campaigns, government, political events, communities, and civic life.</p>
+        </div>
+
+        <dl class="metrics-grid metrics-grid--4 reveal">
+          <div class="metric">
+            <dd class="metric-value">20,000+</dd>
+            <dt class="metric-label">Doors Knocked</dt>
+          </div>
+          <div class="metric">
+            <dd class="metric-value">100+</dd>
+            <dt class="metric-label">Political Events</dt>
+          </div>
+          <div class="metric">
+            <dd class="metric-value">1,300+</dd>
+            <dt class="metric-label">Hours of Political &amp; Civic Experience</dt>
+          </div>
+          <div class="metric">
+            <dd class="metric-value metric-value--text">Local · State · Federal</dd>
+            <dt class="metric-label">Political Experience</dt>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         FAQ
+         ====================================================== -->
+    <section class="section" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="split-head reveal">
+          <div>
+            <p class="eyebrow">Questions</p>
+            <h2 class="h2" id="faq-title"><span>Before you</span> <span class="accent">reach out.</span></h2>
+          </div>
+        </div>
+
+        <div class="faq reveal">
+          <details>
+            <summary><span class="faq-num">01</span><span>Do I need political experience to join YLIP?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+            <p class="faq-answer">No. YLIP opportunities can exist for different experience levels. Genuine interest, reliability, professionalism, and willingness to contribute matter.</p>
+          </details>
+          <details>
+            <summary><span class="faq-num">02</span><span>Does joining YLIP guarantee me an internship or campaign role?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+            <p class="faq-answer">No. YLIP helps create and facilitate political opportunities, but placements depend on availability, fit, reliability, and the needs of campaigns, offices, and organizations.</p>
+          </details>
+          <details>
+            <summary><span class="faq-num">03</span><span>Can campaigns work directly with YLIP?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+            <p class="faq-answer">Yes. Candidates and campaigns can work with YLIP across campaign strategy, creative and digital communications, grassroots outreach, data and research, and event management.</p>
+          </details>
+          <details>
+            <summary><span class="faq-num">04</span><span>Can a government office or political organization share an opportunity?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+            <p class="faq-answer">Yes. Offices, campaigns, political organizations, and civic organizations can connect with YLIP about opportunities for young leaders.</p>
+          </details>
+          <details>
+            <summary><span class="faq-num">05</span><span>What kind of political experience can I get through YLIP?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+            <p class="faq-answer">Experiences can involve campaigns, government, legislative environments, political research, communications, data, field operations, events, advocacy, civic engagement, and internships.</p>
+          </details>
+          <details>
+            <summary><span class="faq-num">06</span><span>Is every opportunity available all the time?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+            <p class="faq-answer">No. Political opportunities change based on election cycles, campaigns, legislative activity, events, organizational needs, and availability.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         CLOSING
+         ====================================================== -->
+    <section class="section final-cta on-dark" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 class="final-title final-title--sm reveal" id="cta-title"><span>Politics doesn't start when</span> <span>someone gives you a title.</span></h2>
+        <p class="cta-kicker reveal">It starts when you show up.</p>
+
+        <div class="cta-row reveal">
+          <p>Whether you're looking for your first opportunity or looking for the right people to strengthen your campaign or organization, YLIP gives you a place to start.</p>
+        </div>
+
+        <nav class="close-links reveal" aria-label="Get involved pathways">
+          <a href="#join">Join YLIP <span aria-hidden="true">↑</span></a>
+          <a href="#campaign">Work With YLIP <span aria-hidden="true">↑</span></a>
+          <a href="#partner">Share an Opportunity <span aria-hidden="true">↑</span></a>
+          <a href="#contact">Contact YLIP <span aria-hidden="true">↑</span></a>
+        </nav>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer class="site-footer on-dark">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Young Leaders in Politics — Home">
+            <!-- OFFICIAL LOGO: replace these spans with a white/reversed version of the logo when available:
+                 <img class="brand-logo" src="images/ylip-logo-white.png" alt="Young Leaders in Politics"> -->
+            <span class="brand-mark" aria-hidden="true">YLIP</span>
+            <span class="brand-word" aria-hidden="true">
+              <span>Young</span>
+              <span>Leaders</span>
+              <span>In</span>
+              <span>Politics</span>
+            </span>
+          </a>
+          <p class="footer-name">YLIP<br>Young Leaders in Politics</p>
+          <p class="footer-desc">Connecting young leaders with campaigns, government, and civic opportunities while helping political organizations make an impact.</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h2 class="footer-heading">Navigate</h2>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="campaigns.html">Campaigns</a></li>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href="impact.html">Impact</a></li>
+            <li><a href="opportunities.html">Opportunities</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="footer-heading">Connect</h2>
+          <!--
+            SOCIAL / CONTACT PLACEHOLDERS
+            Replace each <span class="label"> with a real link once available, e.g.:
+            <a class="label" href="YOUR-INSTAGRAM-URL">Instagram</a>
+            and remove the "Coming soon" span.
+          -->
+          <ul class="footer-connect">
+            <li><span class="label">Instagram</span><span class="soon">Coming soon</span></li>
+            <li><span class="label">LinkedIn</span><span class="soon">Coming soon</span></li>
+            <li><span class="label">Email</span><span class="soon">Coming soon</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-loc">Based in Tennessee</span>
+        <span>© 2026 Young Leaders in Politics. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+
+      /* Mobile navigation */
+      var header = document.querySelector('.site-header');
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+
+      function setNav(open) {
+        header.classList.toggle('nav-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        document.body.classList.toggle('no-scroll', open);
+      }
+
+      toggle.addEventListener('click', function () {
+        setNav(!header.classList.contains('nav-open'));
+      });
+
+      nav.addEventListener('click', function (e) {
+        if (e.target.closest('a')) setNav(false);
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && header.classList.contains('nav-open')) {
+          setNav(false);
+          toggle.focus();
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 1140 && header.classList.contains('nav-open')) setNav(false);
+      });
+
+      /* Restrained scroll reveal */
+      var items = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+      items.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+  <script>
+    /* ======================================================
+       FORM SUBMISSION (Formspree)
+       Each form posts to its own action URL with fetch(), so
+       visitors stay on this page. Nothing is stored or logged.
+       ====================================================== */
+    (function () {
+      var MESSAGES = {
+        'young-leader-form': 'Thank you for your interest in YLIP. Your information has been received.',
+        'campaign-form': 'Thank you. Your campaign inquiry has been received.',
+        'partner-form': 'Thank you. Your opportunity has been submitted to YLIP.',
+        'general-contact-form': 'Thank you. Your message has been received.'
+      };
+      var ERROR_MESSAGE = "We couldn't send your submission. Please try again.";
+
+      /* Require at least one checkbox in groups marked data-required-group */
+      var groupChecks = [];
+      document.querySelectorAll('[data-required-group]').forEach(function (group) {
+        var boxes = group.querySelectorAll('input[type="checkbox"]');
+        var msg = group.getAttribute('data-required-group');
+        function check() {
+          var any = Array.prototype.some.call(boxes, function (b) { return b.checked; });
+          boxes[0].setCustomValidity(any ? '' : msg);
+        }
+        boxes.forEach(function (b) { b.addEventListener('change', check); });
+        check();
+        groupChecks.push(check);
+      });
+
+      Object.keys(MESSAGES).forEach(function (id) {
+        var form = document.getElementById(id);
+        if (!form) return;
+        var status = form.querySelector('.form-status');
+        var button = form.querySelector('button[type="submit"]');
+
+        function showStatus(text, isError) {
+          status.textContent = text;
+          status.classList.toggle('form-status--error', !!isError);
+          status.hidden = false;
+        }
+
+        /* The submit event only fires after browser validation passes. */
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var originalLabel = button.innerHTML;
+          button.disabled = true;
+          button.textContent = 'Submitting...';
+          form.setAttribute('aria-busy', 'true');
+          status.hidden = true;
+
+          fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          }).then(function (response) {
+            if (!response.ok) throw new Error('Submission failed');
+            form.reset();
+            groupChecks.forEach(function (fn) { fn(); });
+            showStatus(MESSAGES[id], false);
+          }).catch(function () {
+            showStatus(ERROR_MESSAGE, true);
+          }).then(function () {
+            button.disabled = false;
+            button.innerHTML = originalLabel;
+            form.removeAttribute('aria-busy');
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
